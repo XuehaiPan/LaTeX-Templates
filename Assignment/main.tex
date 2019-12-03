@@ -164,11 +164,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu
 \section*{Question 5 (bonus marks)}
 
 \begin{problem}
-\lstinputlisting[
-  caption=Luftballons Perl Script, % Caption above the listing
-  label=lst:luftballons, % Label for referencing this listing
-  language=Perl, % Use Perl functions/syntax highlighting
-]{luftballons.pl}
+\begin{code}
+  \caption{Luftballons Perl Script} % Caption above the listing
+  \inputminted[
+    label=Luftballons Perl Script, % Add a label to the top, the bottom or both of the frames around the code
+  ]{perl}{luftballons.pl}
+  \label{lst:luftballons} % Label for referencing this listing
+\end{code}
 
 \begin{enumerate}[label=(\arabic*), ref=\arabic*]
   \item How many luftballons will be output by the Listing \ref{lst:luftballons} above?

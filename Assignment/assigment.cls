@@ -160,11 +160,25 @@
 \usepackage{diagbox}
 
 \usepackage{algorithmicx}  % Required for insertion of code
+\usepackage{minted}
 \usepackage{listings}
 \usepackage{xcolor}
 \ifChinese
+  \renewcommand{\listingscaption}{源代码}
   \renewcommand{\lstlistingname}{源代码}
 \fi
+\usemintedstyle{pastie}
+\setminted{
+  frame=lines,
+  labelposition=all,
+  linenos=true,
+  numbers=left,
+  autogobble=true,
+  python3=true,
+  showspaces=false,
+  tabsize=4,
+  fontsize=\footnotesize
+}
 \lstset{
   frame=tbTB,
   basicstyle=\small\Monospace,
@@ -177,6 +191,9 @@
   breaklines=true,
   breakatwhitespace=true
 }
+
+% definition of the "code" environment
+\newenvironment{code}{\captionsetup{type=listing}}{}
 
 \usepackage{enumitem} % To modify the enumerate environment
 

@@ -84,6 +84,13 @@
 \usecolortheme{beaver}
 \definecolor{darkred}{rgb}{0.7, 0, 0} % Make the red color darker and appear more like the PKU red {0.6, 0, 0}
 
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+\pgfdeclareimage[height=0.8cm]{PKU-logo}{figures/PKU-logo.png}
+\logo{\pgfuseimage{PKU-logo}}
+
 \graphicspath{{figures/}{./}}
 
 % Template-specific packages

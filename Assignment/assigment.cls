@@ -152,8 +152,10 @@
 
 \usepackage{graphicx} % Required for including images
 \usepackage{float}
+\usepackage{caption}
 \usepackage{subcaption}
 \usepackage{tikz}
+\usetikzlibrary{positioning, shapes.geometric}
 
 \usepackage{booktabs} % Required for better horizontal rules in tables
 \usepackage{tabularx}

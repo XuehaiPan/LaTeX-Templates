@@ -105,6 +105,7 @@
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage{times} % Use the Times font
+\usefonttheme{professionalfonts}
 \newcommand{\Monospace}{\ttfamily}
 \IfFontExistsTF{Menlo} {
   \newfontfamily\Menlo{Menlo}

@@ -70,8 +70,7 @@
 
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Use 8-bit encoding
-
-\usepackage{mathpazo} % Use the Palatino font
+\usepackage{times} % Use the Times font
 
 \usepackage[protrusion=true]{microtype} % Better typography
 

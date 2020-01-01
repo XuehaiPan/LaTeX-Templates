@@ -156,6 +156,7 @@
 \usepackage{subcaption}
 \usepackage{tikz}
 \usetikzlibrary{positioning, shapes.geometric}
+\graphicspath{{figures/}{./}}
 
 \usepackage{booktabs} % Required for better horizontal rules in tables
 \usepackage{tabularx}

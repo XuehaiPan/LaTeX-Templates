@@ -162,7 +162,9 @@
 \usepackage{tabularx}
 \usepackage{diagbox}
 
-\usepackage{algorithmicx}  % Required for insertion of code
+\usepackage{algorithm}  % Required for insertion of code
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
 \usepackage{minted}
 \usepackage{listings}
 \usepackage{xcolor}

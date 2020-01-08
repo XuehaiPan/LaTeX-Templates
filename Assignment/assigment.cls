@@ -1,6 +1,6 @@
 %%% Identification
 
-\NeedsTeXFormat{LaTeX2e} % we need to have LaTeX2e for this to compile
+\NeedsTeXFormat{LaTeX2e} % We need to have LaTeX2e for this to compile
 \ProvidesClass{assigment} % assigment is the name we need to provide to
                           % the documentclass command on the .tex file
 
@@ -69,15 +69,15 @@
 %%%% Here we do more declarations and call other files
 
 
-% we need to load
+% We need to load
 \LoadClass{\DocumentClass}
 
-% we will modify sections, subsections and sub subsections
+% We will modify sections, subsections and sub subsections
 \RequirePackage{titlesec}
 % Modification of section
 \titleformat{\section}[block]{\normalsize\bfseries\filcenter}{\thesection.}{.3cm}{}
 
-% modification of subsection and sub sub section
+% Modification of subsection and sub sub section
 \titleformat{\subsection}[runin]{\bfseries}{\thesubsection.}
 {1mm}{}[.\quad]
 \titleformat{\subsubsection}[runin]{\bfseries\itshape}{\thesubsubsection.}
@@ -91,7 +91,7 @@
 \fancyhead{}
 \fancyfoot{}
 \pagestyle{fancy}
-\renewcommand{\headrulewidth}{0.4pt} % we want rules
+\renewcommand{\headrulewidth}{0.4pt} % We want rules
 \renewcommand{\footrulewidth}{0.4pt}
 \fancyhead[RO] { \footnotesize\thepage }
 \fancyhead[LO] {
@@ -165,7 +165,7 @@
 \usepackage{multirow}
 \usepackage{diagbox}
 
-\usepackage{algorithm}  % Required for insertion of code
+\usepackage{algorithm} % Required for insertion of code
 \usepackage{algpseudocode}
 \usepackage{minted}
 \usepackage{listings}
@@ -201,9 +201,6 @@
   breakatwhitespace=true
 }
 
-% definition of the "code" environment
-\newenvironment{code}{\captionsetup{type=listing}}{}
-
 \usepackage{enumitem} % To modify the enumerate environment
 
 \usepackage{hyperref} % Required for hyperlinks
@@ -215,6 +212,16 @@
 \usepackage{relsize}
 \usepackage{extarrows}
 
+% Better numbering
+% \numberwithin{equation}{subsection}
+% \numberwithin{figure}{subsection}
+% \numberwithin{table}{subsection}
+\renewcommand\thesubsection{\ifnumgreater{\value{section}}{0}{\arabic{section}.\arabic{subsection}}{\arabic{subsection}}}
+\renewcommand\theequation{\ifnumgreater{\value{subsection}}{0}{\thesubsection.}{\ifnumgreater{\value{section}}{0}{\thesection.}}{}\arabic{equation}}
+\renewcommand\thefigure{\ifnumgreater{\value{subsection}}{0}{\thesubsection.}{\ifnumgreater{\value{section}}{0}{\thesection.}}{}\arabic{figure}}
+\renewcommand\thetable{\ifnumgreater{\value{subsection}}{0}{\thesubsection.}{\ifnumgreater{\value{section}}{0}{\thesection.}}{}\arabic{table}}
+
+% Miscellaneous
 \allowdisplaybreaks
 \setlength\parindent{0pt}
 \tolerance=1000
@@ -222,7 +229,10 @@
 \hyphenpenalty=1000
 \hbadness=10000
 
-% definition of the "problem" environment
+% Definition of the "code" environment
+\newenvironment{code}{\captionsetup{type=listing}}{}
+
+% Definition of the "problem" environment
 \RequirePackage{framed}
 \newenvironment{problem} {
   \begin{framed}

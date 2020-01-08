@@ -1,6 +1,6 @@
 %%% Identification
 
-\NeedsTeXFormat{LaTeX2e} % we need to have LaTeX2e for this to compile
+\NeedsTeXFormat{LaTeX2e} % We need to have LaTeX2e for this to compile
 \ProvidesClass{presentation} % presentation is the name we need to provide to
                              % the documentclass command on the .tex file
 
@@ -13,7 +13,7 @@
 
 \newif\ifChinese
 
-% we hardcode some language options
+% We hardcode some language options
 \DeclareOption{Chinese} {
   \Chinesetrue
   \renewcommand{\DocumentClass}{ctexbeamer}
@@ -37,7 +37,7 @@
 %%%% Here we do more declarations and call other files
 
 
-% we need to load
+% We need to load
 \LoadClass{\DocumentClass}
 
 
@@ -131,7 +131,7 @@
 \usepackage{multirow}
 \usepackage{diagbox}
 
-\usepackage{algorithm}  % Required for insertion of code
+\usepackage{algorithm} % Required for insertion of code
 \usepackage{algpseudocode}
 \usepackage{minted}
 \usepackage{listings}
@@ -173,6 +173,16 @@
 
 \usepackage{setspace}
 
+% Better numbering
+% \numberwithin{equation}{subsection}
+% \numberwithin{figure}{subsection}
+% \numberwithin{table}{subsection}
+\renewcommand\thesubsection{\ifnumgreater{\value{section}}{0}{\arabic{section}.\arabic{subsection}}{\arabic{subsection}}}
+\renewcommand\theequation{\ifnumgreater{\value{subsection}}{0}{\thesubsection.}{\ifnumgreater{\value{section}}{0}{\thesection.}}{}\arabic{equation}}
+\renewcommand\thefigure{\ifnumgreater{\value{subsection}}{0}{\thesubsection.}{\ifnumgreater{\value{section}}{0}{\thesection.}}{}\arabic{figure}}
+\renewcommand\thetable{\ifnumgreater{\value{subsection}}{0}{\thesubsection.}{\ifnumgreater{\value{section}}{0}{\thesection.}}{}\arabic{table}}
+
+% Miscellaneous
 \setlength\parindent{0pt}
 \tolerance=1000
 \emergencystretch=\maxdimen
@@ -205,3 +215,6 @@
   \beamer@firstlineitemizeunskip
 }
 \makeatother
+
+%%% We finish the class with this command
+\endinput

@@ -152,6 +152,7 @@
 }
 
 \usepackage{graphicx} % Required for including images
+\usepackage{wrapfig} % Allows in-line images
 \usepackage{float}
 \usepackage{caption}
 \usepackage{subcaption}

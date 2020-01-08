@@ -128,14 +128,16 @@
 
 \usepackage{booktabs} % Required for better horizontal rules in tables
 \usepackage{tabularx}
+\usepackage{multirow}
 \usepackage{diagbox}
 
 \usepackage{algorithm}  % Required for insertion of code
 \usepackage{algpseudocode}
-\usepackage{algorithmicx}
 \usepackage{minted}
 \usepackage{listings}
 \usepackage{xcolor}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
 \ifChinese
   \renewcommand{\listingscaption}{源代码}
   \renewcommand{\lstlistingname}{源代码}

@@ -154,7 +154,7 @@
 \usepackage{graphicx} % Required for including images
 \usepackage{wrapfig} % Allows in-line images
 \usepackage{float}
-\usepackage{caption}
+\usepackage[justification=centering]{caption}
 \usepackage{subcaption}
 \usepackage{tikz}
 \usetikzlibrary{positioning, shapes.geometric}

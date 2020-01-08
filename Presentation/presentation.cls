@@ -121,7 +121,7 @@
 \usepackage{graphicx} % Required for including images
 \usepackage[absolute, overlay]{textpos}
 \usepackage{float}
-\usepackage{caption}
+\usepackage[justification=centering]{caption}
 \usepackage{subcaption}
 \usepackage{tikz}
 \usetikzlibrary{positioning, shapes.geometric}

@@ -171,8 +171,6 @@
 \usepackage{relsize}
 \usepackage{extarrows}
 
-\usepackage{setspace}
-
 % Better numbering
 % \numberwithin{equation}{subsection}
 % \numberwithin{figure}{subsection}
@@ -183,6 +181,8 @@
 \renewcommand\thetable{\ifnumgreater{\value{subsection}}{0}{\thesubsection.}{\ifnumgreater{\value{section}}{0}{\thesection.}}{}\arabic{table}}
 
 % Miscellaneous
+\usepackage{setspace}
+
 \setlength\parindent{0pt}
 \tolerance=1000
 \emergencystretch=\maxdimen

@@ -222,6 +222,8 @@
 \renewcommand\thetable{\ifnumgreater{\value{subsection}}{0}{\thesubsection.}{\ifnumgreater{\value{section}}{0}{\thesection.}}{}\arabic{table}}
 
 % Miscellaneous
+\usepackage{setspace}
+
 \allowdisplaybreaks
 \setlength\parindent{0pt}
 \tolerance=1000

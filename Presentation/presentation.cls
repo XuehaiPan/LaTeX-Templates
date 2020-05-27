@@ -81,6 +81,17 @@
   % or whatever (possibly just delete it)
 }
 
+% Outer theme
+\useoutertheme{infolines}
+% \setbeamertemplate{headline}{}
+\setbeamertemplate{footline}{}
+
+% Add frame numbers to navigation symbols
+\addtobeamertemplate{navigation symbols} {} {
+  \bfseries \hspace{0.2em}
+  \raisebox{0.5em}[0em][0em]{\insertframenumber/\inserttotalframenumber}
+}
+
 \usecolortheme{beaver}
 \definecolor{darkred}{rgb}{0.7, 0, 0} % Make the red color darker and appear more like the PKU red {0.6, 0, 0}
 

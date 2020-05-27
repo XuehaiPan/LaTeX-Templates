@@ -102,10 +102,9 @@
 % \pgfdeclareimage[height=0.8cm]{PKU-logo}{figures/PKU-logo.eps}
 % \logo{\pgfuseimage{PKU-logo}}
 \addtobeamertemplate{frametitle}{}{
-  \begin{tikzpicture}[remember picture,overlay]
-    \node[anchor=north east,yshift=-12pt] at (current page.north east)
-    {\includegraphics[height=0.6cm]{figures/PKU-logo.eps}};
-  \end{tikzpicture}
+  \begin{textblock*}{0.6cm}(0.875\textwidth, 0.6cm)
+    \includegraphics[height=0.6cm]{figures/PKU-logo.eps}
+  \end{textblock*}
 }
 
 \graphicspath{{figures/}{./}}

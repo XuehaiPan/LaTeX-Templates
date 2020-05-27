@@ -99,8 +99,14 @@
 % is a graphic format that can be processed by latex or pdflatex,
 % resp., then you can add a logo as follows:
 
-\pgfdeclareimage[height=0.8cm]{PKU-logo}{figures/PKU-logo.png}
-\logo{\pgfuseimage{PKU-logo}}
+% \pgfdeclareimage[height=0.8cm]{PKU-logo}{figures/PKU-logo.eps}
+% \logo{\pgfuseimage{PKU-logo}}
+\addtobeamertemplate{frametitle}{}{
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,yshift=-12pt] at (current page.north east)
+    {\includegraphics[height=0.6cm]{figures/PKU-logo.eps}};
+  \end{tikzpicture}
+}
 
 \graphicspath{{figures/}{./}}
 

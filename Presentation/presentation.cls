@@ -196,16 +196,10 @@
 \renewcommand\thefigure{\ifnumgreater{\value{subsection}}{0}{\thesubsection.}{\ifnumgreater{\value{section}}{0}{\thesection.}}{}\arabic{figure}}
 \renewcommand\thetable{\ifnumgreater{\value{subsection}}{0}{\thesubsection.}{\ifnumgreater{\value{section}}{0}{\thesection.}}{}\arabic{table}}
 
-% Miscellaneous
-\usepackage{setspace}
-
-\setlength\parindent{0pt}
-\tolerance=1000
-\emergencystretch=\maxdimen
-\hyphenpenalty=1000
-\hbadness=10000
-
+% Better justification
 \usepackage{ragged2e}
+\usepackage{etoolbox}
+\apptocmd{\frame}{}{\justifying}{}
 \makeatletter
 \renewcommand{\itemize}[1][] {
   \beamer@ifempty{#1}{}{\def\beamer@defaultospec{#1}}
@@ -231,6 +225,15 @@
   \beamer@firstlineitemizeunskip
 }
 \makeatother
+
+% Miscellaneous
+\usepackage{setspace}
+
+\setlength\parindent{0pt}
+\tolerance=1000
+\emergencystretch=\maxdimen
+\hyphenpenalty=1000
+\hbadness=10000
 
 %%% We finish the class with this command
 \endinput

@@ -188,6 +188,7 @@
 \usepackage{extarrows}
 
 % Better numbering
+\setbeamertemplate{caption}[numbered]
 % \numberwithin{equation}{subsection}
 % \numberwithin{figure}{subsection}
 % \numberwithin{table}{subsection}

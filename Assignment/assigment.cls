@@ -25,9 +25,6 @@
 \newcommand{\StudentIdLang}{Student ID}
 \newcommand{\LecturerLang}{Lecturer}
 
-% Header and footers, we will use the titles also
-\RequirePackage{fancyhdr}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Options
@@ -88,39 +85,43 @@
 % Decent margins for the documents, as it is meant to be printed
 \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
 
+% Header and footers, we will use the titles also
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
 \fancyhead{}
 \fancyfoot{}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0.4pt} % We want rules
 \renewcommand{\footrulewidth}{0.4pt}
-\fancyhead[RO] { \footnotesize\thepage }
 \fancyhead[LO] {
   \footnotesize
   \ifdef{\classlocal} {{\itshape \classlocal} -- } {}
-  \itshape\makeatletter\@title\makeatother
+  \itshape \makeatletter\@title\makeatother
 }
-\fancyfoot[RO] {
+\fancyhead[RO] {
   \footnotesize
-  \itshape\makeatletter\@author\makeatother
+  \itshape \makeatletter\@author\makeatother
   \ifdef{\studentidlocal} { -- {\itshape \studentidlocal}} {}
 }
+\fancyfoot[RO] { \footnotesize \thepage\ /\ \pageref*{LastPage} }
 
 % New title style for the document
 \renewcommand{\maketitle} {
   \thispagestyle{plain}
   \begin{center}
-    \ifdef{\institutelocal} {{\scshape \institutelocal} \\ [10pt]} {}
-    \hrule
-    \vspace{10pt}
-    {\LARGE \bfseries \@title} \\ [5pt]
+    \ifdef{\institutelocal} {{\scshape \institutelocal} \\ \vspace{10pt}} {}
+    \hrule \vspace{10pt}
+    {\LARGE \bfseries \@title} \\ \vspace{5pt}
     \StudentLang: {\itshape \@author}
     \ifdef{\studentidlocal} { -- \StudentIdLang: {\itshape \studentidlocal}} {}
-    \vspace{8pt}
-    \hrule
-    \vspace{10pt}
-    \ifdef{\classlocal} {\CourseLang: {\itshape \classlocal}} {}
-    \ifdef{\lecturerlocal} { -- \LecturerLang: {\itshape \lecturerlocal}} {}
-    \\
+    \\ \vspace{8pt}
+    \hrule \vspace{10pt}
+    \ifdef{\classlocal} {
+      \CourseLang: {\itshape \classlocal}
+      \ifdef{\lecturerlocal} { -- \LecturerLang: {\itshape \lecturerlocal} } {}
+      \\
+    } {
+    }
     \DateLang: {\itshape \@date}
     \vspace{15pt}
   \end{center}

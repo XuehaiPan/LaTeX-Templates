@@ -88,26 +88,31 @@
 % Header and footers, we will use the titles also
 \RequirePackage{fancyhdr}
 \RequirePackage{lastpage}
-\fancyhead{}
-\fancyfoot{}
+\fancyhf{}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0.4pt} % We want rules
 \renewcommand{\footrulewidth}{0.4pt}
-\fancyhead[LO] {
+\fancyhead[L] {
   \footnotesize
   \ifdef{\classlocal} {{\itshape \classlocal} -- } {}
   \itshape \makeatletter\@title\makeatother
 }
-\fancyhead[RO] {
+\fancyhead[R] {
   \footnotesize
   \itshape \makeatletter\@author\makeatother
   \ifdef{\studentidlocal} { -- {\itshape \studentidlocal}} {}
 }
-\fancyfoot[RO] { \footnotesize \thepage\ /\ \pageref*{LastPage} }
+\fancyfoot[C] { \footnotesize \thepage\ /\ \pageref*{LastPage} }
+\fancypagestyle{titlepage} {
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \fancyfoot[C] { \footnotesize \thepage\ /\ \pageref*{LastPage} }
+}
 
 % New title style for the document
 \renewcommand{\maketitle} {
-  \thispagestyle{plain}
+  \thispagestyle{titlepage}
   \begin{center}
     \ifdef{\institutelocal} {{\scshape \institutelocal} \\ \vspace{10pt}} {}
     \hrule \vspace{10pt}

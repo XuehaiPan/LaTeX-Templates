@@ -107,13 +107,12 @@
   \end{textblock*}
 }
 
-\graphicspath{{figures/}{./}}
+\graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)
 
 % Template-specific packages
-\usepackage{xeCJK} % Required for CJK
-
 \usepackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
 
+\usepackage{xeCJK} % Required for CJK
 \ifChinese
 \else
   \usepackage[english]{babel} % English language hyphenation

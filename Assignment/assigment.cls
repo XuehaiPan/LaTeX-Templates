@@ -75,10 +75,8 @@
 \titleformat{\section}[block]{\normalsize\bfseries\filcenter}{\thesection.}{.3cm}{}
 
 % Modification of subsection and sub sub section
-\titleformat{\subsection}[runin]{\bfseries}{\thesubsection.}
-{1mm}{}[.\quad]
-\titleformat{\subsubsection}[runin]{\bfseries\itshape}{\thesubsubsection.}
-{1mm}{}[.\quad]
+\titleformat{\subsection}[runin]{\bfseries}{\thesubsection.}{1mm}{}[.\quad]
+\titleformat{\subsubsection}[runin]{\bfseries\itshape}{\thesubsubsection.}{1mm}{}[.\quad]
 
 % Geometry lets us modify the sizes of the document nicely
 \RequirePackage{geometry}
@@ -133,11 +131,10 @@
 }
 
 % Template-specific packages
-\usepackage{xeCJK} % Required for CJK
-
 \usepackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
 \addbibresource{references.bib}
 
+\usepackage{xeCJK} % Required for CJK
 \ifChinese
 \else
   \usepackage[english]{babel} % English language hyphenation
@@ -158,13 +155,14 @@
 }
 
 \usepackage{graphicx} % Required for including images
+\graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)
+
 \usepackage{wrapfig} % Allows in-line images
 \usepackage{float}
 \usepackage[justification=centering]{caption}
 \usepackage{subcaption}
 \usepackage{tikz}
 \usetikzlibrary{positioning, shapes.geometric}
-\graphicspath{{figures/}{./}}
 
 \usepackage{booktabs} % Required for better horizontal rules in tables
 \usepackage{tabularx}

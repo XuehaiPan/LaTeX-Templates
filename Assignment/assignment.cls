@@ -1,7 +1,7 @@
 %%% Identification
 
 \NeedsTeXFormat{LaTeX2e} % We need to have LaTeX2e for this to compile
-\ProvidesClass{assigment} % assigment is the name we need to provide to
+\ProvidesClass{assignment} % assignment is the name we need to provide to
                           % the documentclass command on the .tex file
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

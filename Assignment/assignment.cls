@@ -24,6 +24,7 @@
 \newcommand{\StudentLang}{Student name}
 \newcommand{\StudentIdLang}{Student ID}
 \newcommand{\LecturerLang}{Lecturer}
+\newcommand{\ColonLang}{: }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -52,6 +53,7 @@
   \renewcommand{\DateLang}{截止日期}
   \renewcommand{\StudentLang}{姓名}
   \renewcommand{\StudentIdLang}{学号}
+  \renewcommand{\ColonLang}{：}
 }
 
 \PassOptionsToClass{a4paper}{\DocumentClass}
@@ -115,17 +117,17 @@
     \ifdef{\institutelocal} {{\scshape \institutelocal} \\ \vspace{10pt}} {}
     \hrule \vspace{10pt}
     {\LARGE \bfseries \@title} \\ \vspace{5pt}
-    \StudentLang: {\itshape \@author}
-    \ifdef{\studentidlocal} { -- \StudentIdLang: {\itshape \studentidlocal}} {}
+    \StudentLang\ColonLang{\itshape \@author}
+    \ifdef{\studentidlocal} { -- \StudentIdLang\ColonLang{\itshape \studentidlocal}} {}
     \\ \vspace{8pt}
     \hrule \vspace{10pt}
     \ifdef{\classlocal} {
-      \CourseLang: {\itshape \classlocal}
-      \ifdef{\lecturerlocal} { -- \LecturerLang: {\itshape \lecturerlocal} } {}
+      \CourseLang\ColonLang{\itshape \classlocal}
+      \ifdef{\lecturerlocal} { -- \LecturerLang\ColonLang{\itshape \lecturerlocal} } {}
       \\
     } {
     }
-    \DateLang: {\itshape \@date}
+    \DateLang\ColonLang{\itshape \@date}
     \vspace{15pt}
   \end{center}
 }

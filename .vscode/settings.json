@@ -51,7 +51,6 @@
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
-                "-pdfxe",
                 "-shell-escape",
                 "-outdir=%OUTDIR%",
                 "%DOC%"
@@ -79,6 +78,14 @@
                 "-file-line-error",
                 "-shell-escape",
                 "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
             ],
             "env": {}
         },
@@ -111,9 +118,33 @@
             ]
         },
         {
+            "name": "Biber",
+            "tools": [
+                "biber"
+            ]
+        },
+        {
             "name": "BibTeX",
             "tools": [
                 "bibtex"
+            ]
+        },
+        {
+            "name": "XeLaTeX ➞ Biber ➞ XeLaTeX × 2",
+            "tools": [
+                "xelatex",
+                "biber",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "PDFLaTeX ➞ Biber ➞ PDFLaTeX × 2",
+            "tools": [
+                "pdflatex",
+                "biber",
+                "pdflatex",
+                "pdflatex"
             ]
         },
         {

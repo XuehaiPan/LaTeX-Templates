@@ -138,6 +138,7 @@
 
 \usepackage{xeCJK} % Required for CJK
 \ifChinese
+  \DeclarePrintbibliographyDefaults{title=参考文献}
 \else
   \usepackage[english]{babel} % English language hyphenation
 \fi

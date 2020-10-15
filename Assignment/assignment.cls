@@ -136,8 +136,9 @@
 \usepackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
 \addbibresource{references.bib}
 
-\usepackage{xeCJK} % Required for CJK
 \ifChinese
+  \usepackage{xeCJK} % Required for CJK
+  \renewcommand\labelitemi{\ensuremath{\bullet}}
   \DeclarePrintbibliographyDefaults{title=参考文献}
 \else
   \usepackage[english]{babel} % English language hyphenation
@@ -145,6 +146,7 @@
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage{times} % Use the Times font
+\usepackage{fontspec} % Required for finding font files
 \newcommand{\Monospace}{\ttfamily}
 \IfFontExistsTF{Menlo} {
   \newfontfamily\Menlo{Menlo}

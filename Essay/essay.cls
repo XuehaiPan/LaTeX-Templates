@@ -29,8 +29,9 @@
 \usepackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
 \addbibresource{references.bib}
 
-\usepackage{xeCJK} % Required for CJK
 \ifChinese
+  \usepackage{xeCJK} % Required for CJK
+  \renewcommand\labelitemi{\ensuremath{\bullet}}
   \DeclarePrintbibliographyDefaults{title=参考文献}
 \else
   \usepackage[english]{babel} % English language hyphenation

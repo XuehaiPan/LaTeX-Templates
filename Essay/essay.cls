@@ -42,13 +42,12 @@
 \usepackage{wrapfig} % Allows in-line images
 
 \usepackage{booktabs} % Required for better horizontal rules in tables
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{diagbox}
 
 \usepackage{enumitem} % Required for list customisation
 \setlist{noitemsep} % No spacing between list items
-
-\makeatletter
-\renewcommand\@biblabel[1]{\textbf{#1.}} % Remove the square brackets from each bibliography item ('[1]' to '1.')
-\makeatother
 
 %----------------------------------------------------------------------------------------
 % DOCUMENT MARGINS
@@ -105,9 +104,8 @@
 \pagestyle{fancy} % Enable custom headers and footers
 
 \renewcommand{\headrulewidth}{0pt} % Remove default top horizontal rule
-\lhead{} % Left header
-\chead{} % Centre header
-\rhead{} % Right header
-\lfoot{} % Left footer
-\cfoot{\thepage} % Centre footer
-\rfoot{} % Right footer
+\fancyhf{} % Remove all headers and footers
+\fancyfoot[C]{\thepage} % Center footer
+
+%%% We finish the class with this command
+\endinput

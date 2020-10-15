@@ -107,13 +107,13 @@
   \end{textblock*}
 }
 
-\graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)
-
 % Template-specific packages
 \usepackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
+\addbibresource{references.bib}
 
 \usepackage{xeCJK} % Required for CJK
 \ifChinese
+  \DeclarePrintbibliographyDefaults{title=参考文献}
 \else
   \usepackage[english]{babel} % English language hyphenation
 \fi
@@ -134,6 +134,8 @@
 }
 
 \usepackage{graphicx} % Required for including images
+\graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)
+
 \usepackage[absolute, overlay]{textpos}
 \usepackage{float}
 \usepackage[justification=centering]{caption}

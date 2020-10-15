@@ -31,7 +31,7 @@
 
 \ifChinese
   \usepackage{xeCJK} % Required for CJK
-  \renewcommand\labelitemi{\ensuremath{\bullet}}
+  \renewcommand{\labelitemi}{\ensuremath{\bullet}}
   \DeclarePrintbibliographyDefaults{title=参考文献}
 \else
   \usepackage[english]{babel} % English language hyphenation

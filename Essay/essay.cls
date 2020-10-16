@@ -5,22 +5,22 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{essay}
 
-\newcommand{\DocumentClass}{article}
+\newcommand{\@DocumentClass}{article}
 
 \newif\ifChinese
 
 % we hardcode some language options
 \DeclareOption{Chinese} {
   \Chinesetrue
-  \renewcommand{\DocumentClass}{ctexart}
-  \DeclareOption{GBK}{\PassOptionsToClass{GBK}{\DocumentClass}}
-  \DeclareOption{UTF8}{\PassOptionsToClass{UTF8}{\DocumentClass}}
+  \renewcommand{\@DocumentClass}{ctexart}
+  \DeclareOption{GBK}{\PassOptionsToClass{GBK}{\@DocumentClass}}
+  \DeclareOption{UTF8}{\PassOptionsToClass{UTF8}{\@DocumentClass}}
 }
 
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{\DocumentClass}} % Pass through any options to the base class
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{\@DocumentClass}} % Pass through any options to the base class
 \ProcessOptions\relax % Process given options
 
-\LoadClass{\DocumentClass} % Load the base class
+\LoadClass{\@DocumentClass} % Load the base class
 
 %----------------------------------------------------------------------------------------
 % PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
@@ -88,9 +88,9 @@
 \renewcommand{\maketitle} { % Customise the title (do not edit title and author name here)
   \vspace*{30pt} % Vertical whitespace before the title
   \begin{flushright} % Right align
-    {\LARGE\@title} % Increase the font size of the title
+    {\LARGE \@title} % Increase the font size of the title
     \vspace{50pt} % Vertical whitespace between the title and author name
-    {\large\@author} \\ % Author name
+    {\large \@author} \\ % Author name
     \@date % Date
     \vspace{40pt} % Vertical whitespace between the author block and abstract
   \end{flushright}

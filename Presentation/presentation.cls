@@ -9,25 +9,25 @@
 %%% Options
 %%%% We now pass the options of the class
 
-\newcommand{\DocumentClass}{beamer}
+\newcommand{\@DocumentClass}{beamer}
 
 \newif\ifChinese
 
 % We hardcode some language options
 \DeclareOption{Chinese} {
   \Chinesetrue
-  \renewcommand{\DocumentClass}{ctexbeamer}
-  % Replace the \documentclass to 'ctexbeamer' to use Chinese Characters
-  % Replace the \documentclass declaration above
+  \renewcommand{\@DocumentClass}{ctexbeamer}
+  % Replace the \@DocumentClass to 'ctexbeamer' to use Chinese Characters
+  % Replace the \@DocumentClass declaration above
   % with the following two lines to typeset your
   % lecture notes as a handout:
-  % \documentclass{article}
+  % \@DocumentClass{article}
   % \usepackage{beamerarticle}
 
-  \DeclareOption{UTF8}{\PassOptionsToClass{UTF8}{\DocumentClass}}
+  \DeclareOption{UTF8}{\PassOptionsToClass{UTF8}{\@DocumentClass}}
 }
 
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{\DocumentClass}}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{\@DocumentClass}}
 
 \ProcessOptions\relax
 
@@ -38,7 +38,7 @@
 
 
 % We need to load
-\LoadClass{\DocumentClass}
+\LoadClass{\@DocumentClass}
 
 
 % There are many different themes available for Beamer.
@@ -87,7 +87,7 @@
 \setbeamertemplate{footline}{}
 
 % Add frame numbers to navigation symbols
-\addtobeamertemplate{navigation symbols} {} {
+\addtobeamertemplate{navigation symbols}{}{
   \bfseries \hspace{0.2em}
   \raisebox{0.5em}[0em][0em]{\insertframenumber/\inserttotalframenumber}
 }
@@ -206,7 +206,7 @@
 \makeatletter
 \renewcommand{\itemize}[1][] {
   \beamer@ifempty{#1}{}{\def\beamer@defaultospec{#1}}
-  \ifnum \@itemdepth >2\relax\@toodeep\else
+  \ifnum\@itemdepth>2\relax\@toodeep\else
     \advance\@itemdepth\@ne
     \beamer@computepref\@itemdepth
     \usebeamerfont{itemize/enumerate \beameritemnestingprefix body}

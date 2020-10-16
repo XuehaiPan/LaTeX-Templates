@@ -10,21 +10,21 @@
 %%%% These are some commands where we declare new commands for the class
 
 % We define the macro for the student id
-\newcommand{\studentid}[1]{ \newcommand{\studentidlocal}{#1} }
+\newcommand{\studentid}[1]{\newcommand{\@studentid}{#1}}
 % We define the macro for the name of the lecturer
-\newcommand{\lecturer}[1]{ \newcommand{\lecturerlocal}{#1} }
+\newcommand{\lecturer}[1]{\newcommand{\@lecturer}{#1}}
 % We define the macro for the name of the course
-\newcommand{\class}[1]{ \newcommand{\classlocal}{#1} }
+\newcommand{\course}[1]{\newcommand{\@course}{#1}}
 % We define the macro for the name of the institution
-\newcommand{\institute}[1]{ \newcommand{\institutelocal}{#1} }
+\newcommand{\institute}[1]{\newcommand{\@institute}{#1}}
 
 %these are auxiliary definitions used in the title section
-\newcommand{\CourseLang}{Course}
-\newcommand{\DateLang}{Due date}
-\newcommand{\StudentLang}{Student name}
-\newcommand{\StudentIdLang}{Student ID}
-\newcommand{\LecturerLang}{Lecturer}
-\newcommand{\ColonLang}{: }
+\newcommand{\@CourseLang}{Course}
+\newcommand{\@DateLang}{Due date}
+\newcommand{\@StudentLang}{Student name}
+\newcommand{\@StudentIdLang}{Student ID}
+\newcommand{\@LecturerLang}{Lecturer}
+\newcommand{\@ColonLang}{: }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -37,28 +37,28 @@
 % Two sided paper are difficult to read and grade, we will not use them
 \DeclareOption{twoside}{\OptionNotUsed}
 
-\newcommand{\DocumentClass}{article}
+\newcommand{\@DocumentClass}{article}
 
 \newif\ifChinese
 
 % we hardcode some language options
 \DeclareOption{Chinese} {
   \Chinesetrue
-  \renewcommand{\DocumentClass}{ctexart}
-  \DeclareOption{GBK}{\PassOptionsToClass{GBK}{\DocumentClass}}
-  \DeclareOption{UTF8}{\PassOptionsToClass{UTF8}{\DocumentClass}}
+  \renewcommand{\@DocumentClass}{ctexart}
+  \DeclareOption{GBK}{\PassOptionsToClass{GBK}{\@DocumentClass}}
+  \DeclareOption{UTF8}{\PassOptionsToClass{UTF8}{\@DocumentClass}}
 
-  \renewcommand{\CourseLang}{课程}
-  \renewcommand{\LecturerLang}{教师}
-  \renewcommand{\DateLang}{截止日期}
-  \renewcommand{\StudentLang}{姓名}
-  \renewcommand{\StudentIdLang}{学号}
-  \renewcommand{\ColonLang}{：}
+  \renewcommand{\@CourseLang}{课程}
+  \renewcommand{\@LecturerLang}{教师}
+  \renewcommand{\@DateLang}{截止日期}
+  \renewcommand{\@StudentLang}{姓名}
+  \renewcommand{\@StudentIdLang}{学号}
+  \renewcommand{\@ColonLang}{：}
 }
 
-\PassOptionsToClass{a4paper}{\DocumentClass}
+\PassOptionsToClass{a4paper}{\@DocumentClass}
 
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{\DocumentClass}}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{\@DocumentClass}}
 
 \ProcessOptions\relax
 
@@ -69,7 +69,7 @@
 
 
 % We need to load
-\LoadClass{\DocumentClass}
+\LoadClass{\@DocumentClass}
 
 % We will modify sections, subsections and sub subsections
 \RequirePackage{titlesec}
@@ -93,41 +93,35 @@
 \renewcommand{\headrulewidth}{0.4pt} % We want rules
 \renewcommand{\footrulewidth}{0.4pt}
 \fancyhead[L] {
-  \footnotesize
-  \ifdef{\classlocal} {{\itshape \classlocal} -- } {}
-  \itshape \makeatletter\@title\makeatother
+  \footnotesize\itshape
+  \ifdef{\@course}{\@course\ --\ }{}\@title
 }
 \fancyhead[R] {
-  \footnotesize
-  \itshape \makeatletter\@author\makeatother
-  \ifdef{\studentidlocal} { -- {\itshape \studentidlocal}} {}
+  \footnotesize\itshape
+  \@author\ifdef{\@studentid}{\ --\ \@studentid}{}
 }
-\fancyfoot[C] { \footnotesize \thepage\ /\ \pageref*{LastPage} }
+\fancyfoot[C]{\footnotesize{\thepage\ /\ \pageref*{LastPage}}}
 \fancypagestyle{titlepage} {
   \fancyhf{}
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0.4pt}
-  \fancyfoot[C] { \footnotesize \thepage\ /\ \pageref*{LastPage} }
+  \fancyfoot[C]{\footnotesize{\thepage\ /\ \pageref*{LastPage}}}
 }
 
 % New title style for the document
 \renewcommand{\maketitle} {
   \thispagestyle{titlepage}
   \begin{center}
-    \ifdef{\institutelocal} {{\scshape \institutelocal} \\ \vspace{10pt}} {}
+    \ifdef{\@institute}{{\scshape \@institute} \\ \vspace{10pt}}{}
     \hrule \vspace{10pt}
-    {\LARGE \bfseries \@title} \\ \vspace{5pt}
-    \StudentLang\ColonLang{\itshape \@author}
-    \ifdef{\studentidlocal} { -- \StudentIdLang\ColonLang{\itshape \studentidlocal}} {}
-    \\ \vspace{8pt}
-    \hrule \vspace{10pt}
-    \ifdef{\classlocal} {
-      \CourseLang\ColonLang{\itshape \classlocal}
-      \ifdef{\lecturerlocal} { -- \LecturerLang\ColonLang{\itshape \lecturerlocal} } {}
-      \\
+    {\LARGE\bfseries \@title} \\ \vspace{5pt}
+    \@StudentLang\@ColonLang{\itshape \@author}\ifdef{\@studentid}{\ --\ \@StudentIdLang\@ColonLang{\itshape \@studentid}}{} \\
+    \vspace{8pt} \hrule \vspace{10pt}
+    \ifdef{\@course} {
+      \@CourseLang\@ColonLang{\itshape \@course}\ifdef{\@lecturer}{\ --\ \@LecturerLang\@ColonLang{\itshape \@lecturer}}{} \\
     } {
     }
-    \DateLang\ColonLang{\itshape \@date}
+    \@DateLang\@ColonLang{\itshape \@date}
     \vspace{15pt}
   \end{center}
 }

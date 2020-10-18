@@ -38,6 +38,12 @@ code --new-window Assignment   # open a template folder using vscode
 
 Open then main.tex file in vscode tab, then compile it with LaTeX-Workshop extension tool in the left panel, or use keyboard shortcut: `ctrl / cmd + alt + B`. Get more about the extension features from [wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki).
 
+Useful keyboard shortcuts:
+
+- Build with last used recipe (`ctrl / cmd + alt + B`)
+- Clean up auxiliary files (`ctrl / cmd + alt + C`)
+- SyncTeX from tex to pdf (`ctrl / cmd + alt + J`)
+- SyncTeX from pdf to tex (hold `ctrl` key and click the pdf in the preview panel)
 
 ### Manual Compilation
 

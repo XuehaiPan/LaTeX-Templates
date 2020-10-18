@@ -1,4 +1,14 @@
 {
+    //* Files */
+    "files.autoGuessEncoding": false,
+    "files.encoding": "utf8",
+    "files.eol": "auto",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+
     //! Default Configuration Overrides */
     "[latex]": {
         "editor.tabSize": 2,

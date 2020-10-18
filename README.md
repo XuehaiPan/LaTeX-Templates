@@ -2,9 +2,9 @@
 
 A collection of LaTeX templates.
 
-## Editor Preparation
+## Editor Preparation ([screenshot](#screenshot))
 
-### Install VS Code and Extensions
+### 1. Install VS Code and Extensions
 
 **Visual Studio Code** is strongly recommended as editor for LaTeX projects. You can download and install it from the official site [https://code.visualstudio.com](https://code.visualstudio.com).
 
@@ -16,7 +16,7 @@ Recommended extensions:
 
 You can find them in Visual Studio Code Marketplace (ctrl / cmd + shift + X).
 
-### Setup Editor for LaTeX Projects
+### 2. Setup Editor for LaTeX Projects
 
 ```bash
 # clone this repository
@@ -30,13 +30,13 @@ Then install recommended extensions in [`".vscode/extensions.json"`](.vscode/ext
 
 ## Usage
 
-### Compile with LaTeX Workshop
+### 3. Compile with LaTeX Workshop
 
 ```bash
 code --new-window Assignment   # open a template folder using vscode
 ```
 
-Open then main.tex file in vscode tab, then compile it with LaTeX-Workshop extension tool in the left panel, or use keyboard shortcut: `ctrl / cmd + alt + B`. Get more about the extension features from [wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki).
+Open the `main.tex` file in vscode tab, then compile it with LaTeX-Workshop extension tool in the left panel, or use keyboard shortcut: `ctrl / cmd + alt + B`. Get more about the extension features from [wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki).
 
 Useful keyboard shortcuts:
 
@@ -45,15 +45,15 @@ Useful keyboard shortcuts:
 - SyncTeX from tex to pdf (`ctrl / cmd + alt + J`)
 - SyncTeX from pdf to tex (hold `ctrl` key and click the pdf in the preview panel)
 
-### Manual Compilation
+### * Manual Compilation
 
 ```bash
-cd Assignment   # to the template folder
+cd Assignment   # to a template folder
 ```
 
 Compile with LaTeXmk (Recommended)
 ```bash
-latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main.tex
+latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
 ```
 
 Compile with XeLaTeX and Biber
@@ -65,6 +65,6 @@ xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
 xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
 ```
 
-Screenshot:
+## Screenshot
 
 ![screenshot](./assets/screenshot.png)

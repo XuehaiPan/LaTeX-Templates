@@ -9,6 +9,26 @@
         "editor.wordWrap": "bounded"
     },
 
+    //* Bracket Pair Colorizer */
+    "bracket-pair-colorizer-2.colorMode": "Consecutive",
+    "bracket-pair-colorizer-2.colors": [
+        "Gold",
+        "DeepPink",
+        "Cyan",
+        "DarkOrange",
+        "LimeGreen",
+        "Magenta",
+        "DeepSkyBlue",
+        "HotPink",
+        "LightSeaGreen",
+        "Orchid"
+    ],
+    "bracket-pair-colorizer-2.showBracketsInGutter": true,
+    "bracket-pair-colorizer-2.showBracketsInRuler": true,
+    "bracket-pair-colorizer-2.showHorizontalScopeLine": true,
+    "bracket-pair-colorizer-2.showVerticalScopeLine": true,
+    "bracket-pair-colorizer-2.highlightActiveScope": true,
+
     //* LaTeX Workshop */
     "latex-workshop.intellisense.package.enabled": true,
     "latex-workshop.intellisense.unimathsymbols.enabled": true,
@@ -194,5 +214,13 @@
         "*.synctex(busy)",
         "*.synctex.gz(busy)",
         "*.run.xml"
-    ]
+    ],
+
+    //* Local History *//
+    "local-history.enabled": 2,
+    "local-history.absolute": false,
+    "local-history.path": "${workspaceFolder}/.vscode",
+    "local-history.saveDelay": 120,
+    "local-history.daysLimit": 14,
+    "local-history.treeLocation": "localHistory"
 }

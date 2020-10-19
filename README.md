@@ -12,9 +12,9 @@ Recommended extensions:
 
 - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop): boost LaTeX typesetting efficiency with preview, compile, autocomplete, colorize, and more.
 - [Local History](https://marketplace.visualstudio.com/items?itemName=xyz.local-history): maintain local history of files.
-- [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2):colorize matching brackets.
+- [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2): colorize matching brackets.
 
-You can find them in Visual Studio Code Marketplace (ctrl / cmd + shift + X).
+You can find them in Visual Studio Code Marketplace (`ctrl / cmd + shift + X`).
 
 ### 2. Setup Editor for LaTeX Projects
 
@@ -30,7 +30,7 @@ Then install recommended extensions in [`".vscode/extensions.json"`](.vscode/ext
 
 ## Usage
 
-### 3. Compile with LaTeX Workshop
+### 3. Compile and Preview with LaTeX Workshop
 
 ```bash
 code --new-window Assignment   # open a template folder using vscode

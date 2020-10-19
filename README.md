@@ -18,7 +18,7 @@ You can find them in Visual Studio Code Marketplace (`ctrl / cmd + shift + X`).
 
 ### 2. Setup Editor for LaTeX Projects
 
-```bash
+```shellscript
 # clone this repository
 git clone https://github.com/XuehaiPan/LaTeX-Templates.git
 
@@ -32,32 +32,35 @@ Then install recommended extensions in [`".vscode/extensions.json"`](.vscode/ext
 
 ### 3. Compile and Preview with LaTeX Workshop
 
-```bash
+```shellscript
 code --new-window Assignment   # open a template folder using vscode
 ```
 
 Open the `main.tex` file in vscode tab, then compile it with LaTeX-Workshop extension tool in the left panel, or use keyboard shortcut: `ctrl / cmd + alt + B`. Get more about the extension features from [wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki).
 
-Useful keyboard shortcuts:
+Useful keyboard shortcuts (may be override by keymap settings):
 
 - Build with last used recipe (`ctrl / cmd + alt + B`)
 - Clean up auxiliary files (`ctrl / cmd + alt + C`)
 - SyncTeX from tex to pdf (`ctrl / cmd + alt + J`)
 - SyncTeX from pdf to tex (hold `ctrl` key and click the pdf in the preview panel)
+- Format source files using LaTeXIndent (`ctrl / cmd + shift + I`)
 
 ### * Manual Compilation
 
-```bash
+```shellscript
 cd Assignment   # to a template folder
 ```
 
 Compile with LaTeXmk (Recommended)
-```bash
+
+```shellscript
 latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
 ```
 
 Compile with XeLaTeX and Biber
-```bash
+
+```shellscript
 # XeLaTeX ➞ Biber ➞ XeLaTeX × 2
 xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
 biber main

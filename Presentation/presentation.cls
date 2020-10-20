@@ -22,7 +22,7 @@
   % with the following two lines to typeset your
   % lecture notes as a handout:
   % \@DocumentClass{article}
-  % \usepackage{beamerarticle}
+  % \RequirePackage{beamerarticle}
 
   \DeclareOption{UTF8}{\PassOptionsToClass{UTF8}{\@DocumentClass}}
 }
@@ -108,19 +108,19 @@
 }
 
 % Template-specific packages
-\usepackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
+\RequirePackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
 \addbibresource{references.bib}
 
 \if@Chinese
-  \usepackage{xeCJK} % Required for CJK
+  \RequirePackage{xeCJK} % Required for CJK
   \DeclarePrintbibliographyDefaults{title=参考文献}
 \else
-  \usepackage[english]{babel} % English language hyphenation
+  \RequirePackage[english]{babel} % English language hyphenation
 \fi
-\usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[T1]{fontenc} % Output font encoding for international characters
-\usepackage{times} % Use the Times font
-\usepackage{fontspec} % Required for finding font files
+\RequirePackage[utf8]{inputenc} % Required for inputting international characters
+\RequirePackage[T1]{fontenc} % Output font encoding for international characters
+\RequirePackage{times} % Use the Times font
+\RequirePackage{fontspec} % Required for finding font files
 \usefonttheme{professionalfonts}
 \newcommand{\Monospace}{\ttfamily}
 \IfFontExistsTF{Menlo} {
@@ -134,26 +134,26 @@
   }
 }
 
-\usepackage{graphicx} % Required for including images
+\RequirePackage{graphicx} % Required for including images
 \graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)
 
-\usepackage[absolute, overlay]{textpos}
-\usepackage{float}
-\usepackage[justification=centering]{caption}
-\usepackage{subcaption}
-\usepackage{tikz}
+\RequirePackage[absolute, overlay]{textpos}
+\RequirePackage{float}
+\RequirePackage[justification=centering]{caption}
+\RequirePackage{subcaption}
+\RequirePackage{tikz}
 \usetikzlibrary{positioning, shapes.geometric}
 
-\usepackage{booktabs} % Required for better horizontal rules in tables
-\usepackage{tabularx}
-\usepackage{multirow}
-\usepackage{diagbox}
+\RequirePackage{booktabs} % Required for better horizontal rules in tables
+\RequirePackage{tabularx}
+\RequirePackage{multirow}
+\RequirePackage{diagbox}
 
-\usepackage{algorithm} % Required for insertion of code
-\usepackage{algpseudocode}
-\usepackage{minted}
-\usepackage{listings}
-\usepackage{xcolor}
+\RequirePackage{algorithm} % Required for insertion of code
+\RequirePackage{algpseudocode}
+\RequirePackage{minted}
+\RequirePackage{listings}
+\RequirePackage{xcolor}
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
 \if@Chinese
@@ -182,12 +182,12 @@
   breakatwhitespace=true
 }
 
-\usepackage{amsmath, amssymb, amsfonts} % Required for math
-\usepackage{mathtools}
-\usepackage{mathrsfs}
-\usepackage{physics}
-\usepackage{relsize}
-\usepackage{extarrows}
+\RequirePackage{amsmath, amssymb, amsfonts} % Required for math
+\RequirePackage{mathtools}
+\RequirePackage{mathrsfs}
+\RequirePackage{physics}
+\RequirePackage{relsize}
+\RequirePackage{extarrows}
 
 % Better numbering
 \setbeamertemplate{caption}[numbered]
@@ -200,8 +200,8 @@
 % \renewcommand{\thetable}{\ifnumgreater{\value{subsection}}{0}{\thesubsection.}{\ifnumgreater{\value{section}}{0}{\thesection.}}{}\arabic{table}}
 
 % Better justification
-\usepackage{ragged2e}
-\usepackage{etoolbox}
+\RequirePackage{ragged2e}
+\RequirePackage{etoolbox}
 \apptocmd{\frame}{}{\justifying}{}
 \makeatletter
 \renewcommand{\itemize}[1][] {
@@ -230,7 +230,7 @@
 \makeatother
 
 % Miscellaneous
-\usepackage{setspace}
+\RequirePackage{setspace}
 
 \setlength\parindent{0pt}
 \tolerance=1000

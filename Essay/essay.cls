@@ -26,35 +26,35 @@
 % PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\usepackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
+\RequirePackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
 \addbibresource{references.bib}
 
 \if@Chinese
-  \usepackage{xeCJK} % Required for CJK
+  \RequirePackage{xeCJK} % Required for CJK
   \renewcommand{\labelitemi}{\ensuremath{\bullet}}
   \DeclarePrintbibliographyDefaults{title=参考文献}
 \else
-  \usepackage[english]{babel} % English language hyphenation
+  \RequirePackage[english]{babel} % English language hyphenation
 \fi
 
-\usepackage{graphicx} % Required for including images
+\RequirePackage{graphicx} % Required for including images
 \graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)
 
-\usepackage{wrapfig} % Allows in-line images
+\RequirePackage{wrapfig} % Allows in-line images
 
-\usepackage{booktabs} % Required for better horizontal rules in tables
-\usepackage{tabularx}
-\usepackage{multirow}
-\usepackage{diagbox}
+\RequirePackage{booktabs} % Required for better horizontal rules in tables
+\RequirePackage{tabularx}
+\RequirePackage{multirow}
+\RequirePackage{diagbox}
 
-\usepackage{enumitem} % Required for list customisation
+\RequirePackage{enumitem} % Required for list customisation
 \setlist{noitemsep} % No spacing between list items
 
 %----------------------------------------------------------------------------------------
 % DOCUMENT MARGINS
 %----------------------------------------------------------------------------------------
 
-\usepackage{geometry} % Required for adjusting page dimensions and margins
+\RequirePackage{geometry} % Required for adjusting page dimensions and margins
 
 \geometry{
   paper=a4paper, % Paper size, change to letterpaper for US letter size
@@ -72,11 +72,11 @@
 % FONTS
 %----------------------------------------------------------------------------------------
 
-\usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[T1]{fontenc} % Use 8-bit encoding
-\usepackage{times} % Use the Times font
+\RequirePackage[utf8]{inputenc} % Required for inputting international characters
+\RequirePackage[T1]{fontenc} % Use 8-bit encoding
+\RequirePackage{times} % Use the Times font
 
-\usepackage[protrusion=true]{microtype} % Better typography
+\RequirePackage[protrusion=true]{microtype} % Better typography
 
 \linespread{1.05} % Increase line spacing slightly; Palatino benefits from a slight increase by default
 
@@ -101,7 +101,7 @@
 % HEADERS AND FOOTERS
 %----------------------------------------------------------------------------------------
 
-\usepackage{fancyhdr} % Required for customising headers and footers
+\RequirePackage{fancyhdr} % Required for customising headers and footers
 \pagestyle{fancy} % Enable custom headers and footers
 
 \renewcommand{\headrulewidth}{0pt} % Remove default top horizontal rule

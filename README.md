@@ -42,8 +42,8 @@ Useful keyboard shortcuts (may be override by keymap settings):
 
 - Build with last used recipe (`ctrl / cmd + alt + B`)
 - Clean up auxiliary files (`ctrl / cmd + alt + C`)
-- SyncTeX from tex to pdf (`ctrl / cmd + alt + J`)
-- SyncTeX from pdf to tex (hold `ctrl` key and click the pdf in the preview panel)
+- SyncTeX from TeX to PDF (`ctrl / cmd + alt + J`)
+- SyncTeX from PDF to TeX (hold `ctrl` key and click the PDF in the preview panel)
 - Format source files using LaTeXIndent (`ctrl / cmd + shift + I`)
 
 ### * Manual Compilation
@@ -52,7 +52,7 @@ Useful keyboard shortcuts (may be override by keymap settings):
 cd Assignment   # to a template folder
 ```
 
-Compile with LaTeXmk (Recommended)
+#### Compile with LaTeXmk (Recommended)
 
 ```bash
 latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
@@ -70,7 +70,7 @@ latexmk -c
 latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main || latexmk -c
 ```
 
-Compile with XeLaTeX and Biber
+#### Compile with XeLaTeX and Biber
 
 ```bash
 # XeLaTeX ➞ Biber ➞ XeLaTeX × 2

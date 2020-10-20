@@ -15,7 +15,7 @@
 %     \usepackage[final]{neurips_2020}
 
 % to avoid loading the natbib package, add option nonatbib:
-     \usepackage[nonatbib]{neurips_2020}
+\usepackage[nonatbib]{neurips_2020}
 
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
@@ -315,34 +315,34 @@ achieve this.
 
 \begin{itemize}
 
-\item You should directly generate PDF files using \verb+pdflatex+.
+  \item You should directly generate PDF files using \verb+pdflatex+.
 
-\item You can check which fonts a PDF files uses.  In Acrobat Reader, select the
-  menu Files$>$Document Properties$>$Fonts and select Show All Fonts. You can
-  also use the program \verb+pdffonts+ which comes with \verb+xpdf+ and is
-  available out-of-the-box on most Linux machines.
+  \item You can check which fonts a PDF files uses.  In Acrobat Reader, select the
+        menu Files$>$Document Properties$>$Fonts and select Show All Fonts. You can
+        also use the program \verb+pdffonts+ which comes with \verb+xpdf+ and is
+        available out-of-the-box on most Linux machines.
 
-\item The IEEE has recommendations for generating PDF files whose fonts are also
-  acceptable for NeurIPS. Please see
-  \url{http://www.emfield.org/icuwb2010/downloads/IEEE-PDF-SpecV32.pdf}
+  \item The IEEE has recommendations for generating PDF files whose fonts are also
+        acceptable for NeurIPS. Please see
+        \url{http://www.emfield.org/icuwb2010/downloads/IEEE-PDF-SpecV32.pdf}
 
-\item \verb+xfig+ "patterned" shapes are implemented with bitmap fonts.  Use
-  "solid" shapes instead.
+  \item \verb+xfig+ "patterned" shapes are implemented with bitmap fonts.  Use
+        "solid" shapes instead.
 
-\item The \verb+\bbold+ package almost always uses bitmap fonts.  You should use
-  the equivalent AMS Fonts:
-\begin{verbatim}
+  \item The \verb+\bbold+ package almost always uses bitmap fonts.  You should use
+        the equivalent AMS Fonts:
+        \begin{verbatim}
    \usepackage{amsfonts}
 \end{verbatim}
-followed by, e.g., \verb+\mathbb{R}+, \verb+\mathbb{N}+, or \verb+\mathbb{C}+
-for $\mathbb{R}$, $\mathbb{N}$ or $\mathbb{C}$.  You can also use the following
-workaround for reals, natural and complex:
-\begin{verbatim}
+        followed by, e.g., \verb+\mathbb{R}+, \verb+\mathbb{N}+, or \verb+\mathbb{C}+
+        for $\mathbb{R}$, $\mathbb{N}$ or $\mathbb{C}$.  You can also use the following
+        workaround for reals, natural and complex:
+        \begin{verbatim}
    \newcommand{\RR}{I\!\!R} %real numbers
    \newcommand{\Nat}{I\!\!N} %natural numbers
    \newcommand{\CC}{I\!\!\!\!C} %complex numbers
 \end{verbatim}
-Note that \verb+amsfonts+ is automatically loaded by the \verb+amssymb+ package.
+        Note that \verb+amsfonts+ is automatically loaded by the \verb+amssymb+ package.
 
 \end{itemize}
 
@@ -369,21 +369,21 @@ necessary.
 
 \section*{Broader Impact}
 
-Authors are required to include a statement of the broader impact of their work, including its ethical aspects and future societal consequences. 
-Authors should discuss both positive and negative outcomes, if any. For instance, authors should discuss a) 
+Authors are required to include a statement of the broader impact of their work, including its ethical aspects and future societal consequences.
+Authors should discuss both positive and negative outcomes, if any. For instance, authors should discuss a)
 who may benefit from this research, b) who may be put at disadvantage from this research, c) what are the consequences of failure of the system, and d) whether the task/method leverages
 biases in the data. If authors believe this is not applicable to them, authors can simply state this.
 
 Use unnumbered first level headings for this section, which should go at the end of the paper. {\bf Note that this section does not count towards the eight pages of content that are allowed.}
 
 \begin{ack}
-Use unnumbered first level headings for the acknowledgments. All acknowledgments
-go at the end of the paper before the list of references. Moreover, you are required to declare 
-funding (financial activities supporting the submitted work) and competing interests (related financial activities outside the submitted work). 
-More information about this disclosure can be found at: \url{https://neurips.cc/Conferences/2020/PaperInformation/FundingDisclosure}.
+  Use unnumbered first level headings for the acknowledgments. All acknowledgments
+  go at the end of the paper before the list of references. Moreover, you are required to declare
+  funding (financial activities supporting the submitted work) and competing interests (related financial activities outside the submitted work).
+  More information about this disclosure can be found at: \url{https://neurips.cc/Conferences/2020/PaperInformation/FundingDisclosure}.
 
 
-Do {\bf not} include this section in the anonymized submission, only in the final paper. You can use the \texttt{ack} environment provided in the style file to autmoatically hide this section in the anonymized submission.
+  Do {\bf not} include this section in the anonymized submission, only in the final paper. You can use the \texttt{ack} environment provided in the style file to autmoatically hide this section in the anonymized submission.
 \end{ack}
 
 \section*{References}
@@ -392,7 +392,7 @@ References follow the acknowledgments. Use unnumbered first-level heading for
 the references. Any choice of citation style is acceptable as long as you are
 consistent. It is permissible to reduce the font size to \verb+small+ (9 point)
 when listing the references.
-{\bf Note that the Reference section does not count towards the eight pages of content that are allowed.}
+  {\bf Note that the Reference section does not count towards the eight pages of content that are allowed.}
 \medskip
 
 \small
@@ -402,8 +402,8 @@ connectionist rule extraction. In G.\ Tesauro, D.S.\ Touretzky and T.K.\ Leen
 (eds.), {\it Advances in Neural Information Processing Systems 7},
 pp.\ 609--616. Cambridge, MA: MIT Press.
 
-[2] Bower, J.M.\ \& Beeman, D.\ (1995) {\it The Book of GENESIS: Exploring
-  Realistic Neural Models with the GEneral NEural SImulation System.}  New York:
+  [2] Bower, J.M.\ \& Beeman, D.\ (1995) {\it The Book of GENESIS: Exploring
+    Realistic Neural Models with the GEneral NEural SImulation System.}  New York:
 TELOS/Springer--Verlag.
 
 [3] Hasselmo, M.E., Schnell, E.\ \& Barkai, E.\ (1995) Dynamics of learning and

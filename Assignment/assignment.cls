@@ -39,11 +39,11 @@
 
 \newcommand{\@DocumentClass}{article}
 
-\newif\ifChinese
+\newif\if@Chinese\@Chinesefalse
 
 % we hardcode some language options
 \DeclareOption{Chinese} {
-  \Chinesetrue
+  \@Chinesetrue
   \renewcommand{\@DocumentClass}{ctexart}
   \DeclareOption{GBK}{\PassOptionsToClass{GBK}{\@DocumentClass}}
   \DeclareOption{UTF8}{\PassOptionsToClass{UTF8}{\@DocumentClass}}
@@ -130,7 +130,7 @@
 \usepackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
 \addbibresource{references.bib}
 
-\ifChinese
+\if@Chinese
   \usepackage{xeCJK} % Required for CJK
   \renewcommand{\labelitemi}{\ensuremath{\bullet}}
   \DeclarePrintbibliographyDefaults{title=参考文献}
@@ -175,7 +175,7 @@
 \usepackage{xcolor}
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
-\ifChinese
+\if@Chinese
   \renewcommand{\listingscaption}{源代码}
   \renewcommand{\lstlistingname}{源代码}
 \fi

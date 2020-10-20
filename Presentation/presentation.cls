@@ -11,11 +11,11 @@
 
 \newcommand{\@DocumentClass}{beamer}
 
-\newif\ifChinese
+\newif\if@Chinese\@Chinesefalse
 
 % We hardcode some language options
 \DeclareOption{Chinese} {
-  \Chinesetrue
+  \@Chinesetrue
   \renewcommand{\@DocumentClass}{ctexbeamer}
   % Replace the \@DocumentClass to 'ctexbeamer' to use Chinese Characters
   % Replace the \@DocumentClass declaration above
@@ -111,7 +111,7 @@
 \usepackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
 \addbibresource{references.bib}
 
-\ifChinese
+\if@Chinese
   \usepackage{xeCJK} % Required for CJK
   \DeclarePrintbibliographyDefaults{title=参考文献}
 \else
@@ -156,7 +156,7 @@
 \usepackage{xcolor}
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
-\ifChinese
+\if@Chinese
   \renewcommand{\listingscaption}{源代码}
   \renewcommand{\lstlistingname}{源代码}
 \fi

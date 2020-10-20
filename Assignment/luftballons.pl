@@ -1,6 +1,6 @@
-#!/usr/bin/perl 
+#!/usr/bin/perl
 
-use strict; 
+use strict;
 use warnings;
 
 for (1..99) { print $_." Luftballons\n"; }

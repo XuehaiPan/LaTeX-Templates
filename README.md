@@ -18,7 +18,7 @@ You can find them in Visual Studio Code Marketplace (`ctrl / cmd + shift + X`).
 
 ### 2. Setup Editor for LaTeX Projects
 
-```shellscript
+```bash
 # clone this repository
 git clone https://github.com/XuehaiPan/LaTeX-Templates.git
 
@@ -32,7 +32,7 @@ Then install recommended extensions in [`".vscode/extensions.json"`](.vscode/ext
 
 ### 3. Compile and Preview with LaTeX Workshop
 
-```shellscript
+```bash
 code --new-window Assignment   # open a template folder using vscode
 ```
 
@@ -48,19 +48,31 @@ Useful keyboard shortcuts (may be override by keymap settings):
 
 ### * Manual Compilation
 
-```shellscript
+```bash
 cd Assignment   # to a template folder
 ```
 
 Compile with LaTeXmk (Recommended)
 
-```shellscript
+```bash
 latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
+```
+
+- clean up auxiliary files
+
+```bash
+latexmk -c
+```
+
+- build and do cleanup if failed
+
+```bash
+latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main || latexmk -c
 ```
 
 Compile with XeLaTeX and Biber
 
-```shellscript
+```bash
 # XeLaTeX ➞ Biber ➞ XeLaTeX × 2
 xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
 biber main

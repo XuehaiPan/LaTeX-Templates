@@ -228,7 +228,7 @@
         "_minted-*"
     ],
 
-    //* Local History *//
+    //* Local History */
     "local-history.enabled": 2,
     "local-history.absolute": false,
     "local-history.path": "${workspaceFolder}/.vscode",

@@ -83,6 +83,7 @@
 
 % Outer theme
 \useoutertheme{infolines}
+\useinnertheme{rounded}
 % \setbeamertemplate{headline}{}
 \setbeamertemplate{footline}{}
 
@@ -102,8 +103,8 @@
 % \pgfdeclareimage[height=0.8cm]{PKU-logo}{figures/PKU-logo.eps}
 % \logo{\pgfuseimage{PKU-logo}}
 \addtobeamertemplate{frametitle}{}{
-  \begin{textblock*}{0.6cm}(0.875\textwidth, 0.6cm)
-    \includegraphics[height=0.6cm]{figures/PKU-logo.eps}
+  \begin{textblock*}{2.2cm}(\textwidth-1.6cm, 0.6cm)
+    \includegraphics[width=2.2cm]{figures/PKU-logo.eps}
   \end{textblock*}
 }
 

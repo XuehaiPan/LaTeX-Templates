@@ -103,7 +103,7 @@
 % \pgfdeclareimage[height=0.8cm]{PKU-logo}{figures/PKU-logo.eps}
 % \logo{\pgfuseimage{PKU-logo}}
 \addtobeamertemplate{frametitle}{}{
-  \begin{textblock*}{2.2cm}(\textwidth-1.6cm, 0.6cm)
+  \begin{textblock*}{2.2cm}[1, 0](\paperwidth-0.2cm, 0.6cm)
     \includegraphics[width=2.2cm]{figures/PKU-logo.eps}
   \end{textblock*}
 }

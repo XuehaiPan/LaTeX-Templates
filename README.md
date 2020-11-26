@@ -14,7 +14,7 @@ Recommended extensions:
 - [Local History](https://marketplace.visualstudio.com/items?itemName=xyz.local-history): maintain local history of files.
 - [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2): colorize matching brackets.
 
-You can find them in Visual Studio Code Marketplace (`ctrl / cmd + shift + X`).
+You can find them in Visual Studio Code Marketplace (`Ctrl / Cmd + Shift + X`).
 
 ### 2. Setup Editor for LaTeX Projects
 
@@ -36,15 +36,15 @@ Then install recommended extensions in [`".vscode/extensions.json"`](.vscode/ext
 code --new-window Assignment   # open a template folder using vscode
 ```
 
-Open the `main.tex` file in vscode tab, then compile it with LaTeX-Workshop extension tool in the left panel, or use keyboard shortcut: `ctrl / cmd + alt + B`. Get more about the extension features from [wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki).
+Open the `main.tex` file in vscode tab, then compile it with LaTeX-Workshop extension tool in the left panel, or use keyboard shortcut: `Ctrl / Cmd + Alt + B`. Get more about the extension features from [wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki).
 
-Useful keyboard shortcuts (may be override by keymap settings):
+Useful keyboard shortcuts (may be overridden by keymap settings):
 
-- Build with last used recipe (`ctrl / cmd + alt + B`)
-- Clean up auxiliary files (`ctrl / cmd + alt + C`)
-- SyncTeX from TeX to PDF (`ctrl / cmd + alt + J`)
-- SyncTeX from PDF to TeX (hold `ctrl` key and click the PDF in the preview panel)
-- Format source files using LaTeXIndent (`ctrl / cmd + shift + I`)
+- Build with last used recipe (`Ctrl / Cmd + Alt + B`)
+- Clean up auxiliary files (`Ctrl / Cmd + Alt + C`)
+- SyncTeX from TeX to PDF (`Ctrl / Cmd + Alt + J`)
+- SyncTeX from PDF to TeX (hold `Ctrl` key and click the PDF in the preview panel)
+- Format source files using LaTeXIndent (`Ctrl / Cmd + Shift + I`)
 
 ### * Manual Compilation
 

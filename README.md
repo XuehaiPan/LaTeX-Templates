@@ -52,7 +52,7 @@ Useful keyboard shortcuts (may be overridden by keymap settings):
 cd Assignment   # to a template folder
 ```
 
-#### Compile with LaTeXmk (Recommended)
+#### Compile with Latexmk (Recommended)
 
 ```bash
 latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
@@ -82,4 +82,4 @@ xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
 
 ## Screenshot
 
-![screenshot](./assets/screenshot.png)
+![screenshot](https://user-images.githubusercontent.com/16078332/100626383-bb77ce00-3360-11eb-9b63-ba5769dcd882.png)

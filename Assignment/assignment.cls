@@ -142,18 +142,21 @@
 \RequirePackage[utf8]{inputenc} % Required for inputting international characters
 \RequirePackage[T1]{fontenc} % Output font encoding for international characters
 \RequirePackage{times} % Use the Times font
-\RequirePackage{fontspec} % Required for finding font files
 \newcommand{\Monospace}{\ttfamily}
-\IfFontExistsTF{Menlo} {
-  \newfontfamily\Menlo{Menlo}
-  \renewcommand{\Monospace}{\Menlo}
-} {
-  \IfFontExistsTF{Monaco} {
-    \newfontfamily\Monaco{Monaco}
-    \renewcommand{\Monospace}{\Monaco}
+\ifPDFTeX
+\else
+  \RequirePackage{fontspec} % Required for finding font files
+  \IfFontExistsTF{Menlo} {
+    \newfontfamily\Menlo{Menlo}
+    \renewcommand{\Monospace}{\Menlo}
   } {
+    \IfFontExistsTF{Monaco} {
+      \newfontfamily\Monaco{Monaco}
+      \renewcommand{\Monospace}{\Monaco}
+    } {
+    }
   }
-}
+\fi
 
 \RequirePackage{graphicx} % Required for including images
 \graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)

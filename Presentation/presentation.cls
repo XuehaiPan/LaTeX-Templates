@@ -122,19 +122,22 @@
 \RequirePackage[utf8]{inputenc} % Required for inputting international characters
 \RequirePackage[T1]{fontenc} % Output font encoding for international characters
 \RequirePackage{times} % Use the Times font
-\RequirePackage{fontspec} % Required for finding font files
 \usefonttheme{professionalfonts}
 \newcommand{\Monospace}{\ttfamily}
-\IfFontExistsTF{Menlo} {
-  \newfontfamily\Menlo{Menlo}
-  \renewcommand{\Monospace}{\Menlo}
-} {
-  \IfFontExistsTF{Monaco} {
-    \newfontfamily\Monaco{Monaco}
-    \renewcommand{\Monospace}{\Monaco}
+\ifPDFTeX
+\else
+  \RequirePackage{fontspec} % Required for finding font files
+  \IfFontExistsTF{Menlo} {
+    \newfontfamily\Menlo{Menlo}
+    \renewcommand{\Monospace}{\Menlo}
   } {
+    \IfFontExistsTF{Monaco} {
+      \newfontfamily\Monaco{Monaco}
+      \renewcommand{\Monospace}{\Monaco}
+    } {
+    }
   }
-}
+\fi
 
 \RequirePackage{graphicx} % Required for including images
 \graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)
@@ -209,7 +212,9 @@
 \makeatletter
 \renewcommand{\itemize}[1][] {
   \beamer@ifempty{#1}{}{\def\beamer@defaultospec{#1}}
-  \ifnum\@itemdepth>2\relax\@toodeep\else
+  \ifnum \@itemdepth>2 \relax
+    \@toodeep
+  \else
     \advance\@itemdepth\@ne
     \beamer@computepref\@itemdepth
     \usebeamerfont{itemize/enumerate \beameritemnestingprefix body}
@@ -219,7 +224,7 @@
       {\usebeamertemplate{itemize \beameritemnestingprefix item}}
       {
         \def\makelabel##1{{
-          \hss\llap {{
+          \hss\llap{{
             \usebeamerfont*{itemize \beameritemnestingprefix item}
             \usebeamercolor[fg]{itemize \beameritemnestingprefix item}##1
           }}

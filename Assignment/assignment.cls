@@ -18,7 +18,7 @@
 % We define the macro for the name of the institution
 \newcommand{\institute}[1]{\newcommand{\@institute}{#1}}
 
-%these are auxiliary definitions used in the title section
+% These are auxiliary definitions used in the title section
 \newcommand{\@CourseLang}{Course}
 \newcommand{\@DateLang}{Due date}
 \newcommand{\@StudentLang}{Student name}
@@ -41,7 +41,7 @@
 
 \newif\if@Chinese\@Chinesefalse
 
-% we hardcode some language options
+% We hardcode some language options
 \DeclareOption{Chinese} {
   \@Chinesetrue
   \renewcommand{\@DocumentClass}{ctexart}
@@ -67,7 +67,6 @@
 %%% Bulk Declarations
 %%%% Here we do more declarations and call other files
 
-
 % We need to load
 \LoadClass{\@DocumentClass}
 
@@ -86,8 +85,8 @@
 \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
 
 % Header and footers, we will use the titles also
-\RequirePackage{fancyhdr}
-\RequirePackage{lastpage}
+\RequirePackage{fancyhdr} % Required for customising headers and footers
+\RequirePackage{lastpage} % Required for refering the last page number
 \fancyhf{}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0.4pt} % We want rules

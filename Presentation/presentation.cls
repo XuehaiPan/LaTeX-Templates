@@ -36,10 +36,8 @@
 %%% Bulk Declarations
 %%%% Here we do more declarations and call other files
 
-
 % We need to load
 \LoadClass{\@DocumentClass}
-
 
 % There are many different themes available for Beamer.
 \mode<presentation>
@@ -81,7 +79,7 @@
   % or whatever (possibly just delete it)
 }
 
-% Outer theme
+% Outer and inner theme
 \useoutertheme{infolines}
 \useinnertheme{rounded}
 % \setbeamertemplate{headline}{}

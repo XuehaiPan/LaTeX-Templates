@@ -157,16 +157,17 @@
 \graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)
 
 \RequirePackage{wrapfig} % Allows in-line images
-\RequirePackage{float}
-\RequirePackage[justification=centering]{caption}
-\RequirePackage{subcaption}
-\RequirePackage{tikz}
+\RequirePackage{float} % Better floating style for figures & tables
+\RequirePackage[justification=centering]{caption} % To modify the captions
+\RequirePackage{subcaption} % Allows subcaptions
+\RequirePackage{tikz} % Required for creating graphics
 \usetikzlibrary{positioning, shapes.geometric}
 
 \RequirePackage{booktabs} % Required for better horizontal rules in tables
-\RequirePackage{tabularx}
-\RequirePackage{multirow}
-\RequirePackage{diagbox}
+\RequirePackage{tabularx} % Better tabular environment
+\RequirePackage{multirow} % Required for merging tabular cells
+\RequirePackage{diagbox} % Required for drawing diagonal lines in tabular cells
+\RequirePackage{makecell} % Required for creating multilined tabular cells
 
 \RequirePackage{algorithm} % Required for insertion of code
 \RequirePackage{algpseudocode}
@@ -225,11 +226,12 @@
 \renewcommand{\thetable}{\ifnumgreater{\value{subsection}}{0}{\thesubsection.}{\ifnumgreater{\value{section}}{0}{\thesection.}}{}\arabic{table}}
 
 % Miscellaneous
-\RequirePackage{setspace}
+\RequirePackage{setspace} % To modify spacing
+\setlength{\parindent}{0pt} % Remove indentation for paragraphs
 
-\allowdisplaybreaks
-\setlength\parindent{0pt}
-\tolerance=1000
+\allowdisplaybreaks % Allows display breaks in environments
+
+\tolerance=1000 % Hyphenation settings
 \emergencystretch=\maxdimen
 \hyphenpenalty=1000
 \hbadness=10000

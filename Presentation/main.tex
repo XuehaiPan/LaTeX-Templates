@@ -3,12 +3,19 @@
 % !TEX root = ./main.tex
 % !BIB program = biber
 
+%----------------------------------------------------------------------------------------
+% PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
 \documentclass[
   UTF8, % Encoding
   aspectratio=43, % Default aspect ratio, values 43/1610/169 are allowed
   % Chinese, % Uncomment for Chinese
 ]{presentation}
 
+%----------------------------------------------------------------------------------------
+% PRESENTATION INFORMATION
+%----------------------------------------------------------------------------------------
 
 \title{Presentation Title}
 
@@ -47,9 +54,11 @@
 \AtBeginSubsection[]
 {
   \begin{frame}<beamer>{Outline}
-  \tableofcontents[currentsection, currentsubsection]
+    \tableofcontents[currentsection, currentsubsection]
   \end{frame}
 }
+
+%----------------------------------------------------------------------------------------
 
 % Let's get started
 \begin{document}
@@ -62,6 +71,10 @@
   \tableofcontents
   % You might wish to add the option [pausesections]
 \end{frame}
+
+%----------------------------------------------------------------------------------------
+% PRESENTATION CONTENT
+%----------------------------------------------------------------------------------------
 
 % Section and subsections will appear in the presentation overview
 % and table of contents.
@@ -131,26 +144,23 @@
 
 \begin{frame}{Summary}
   \begin{itemize}
-    \item
-          The \alert{first main message} of your talk in one or two lines.
-    \item
-          The \alert{second main message} of your talk in one or two lines.
-    \item
-          Perhaps a \alert{third message}, but not more than that.
+    \item The \alert{first main message} of your talk in one or two lines.
+    \item The \alert{second main message} of your talk in one or two lines.
+    \item Perhaps a \alert{third message}, but not more than that.
   \end{itemize}
 
   \begin{itemize}
-    \item
-          Outlook
+    \item Outlook
           \begin{itemize}
-            \item
-                  Something you haven't solved.
-            \item
-                  Something else you haven't solved.
+            \item Something you haven't solved.
+            \item Something else you haven't solved.
           \end{itemize}
   \end{itemize}
 \end{frame}
 
+%----------------------------------------------------------------------------------------
+% BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
 
 % All of the following is optional and typically not needed.
 \appendix
@@ -161,7 +171,6 @@
   \frametitle<presentation>{For Further Reading}
 
   \begin{thebibliography}{10}
-
     \beamertemplatebookbibitems
     % Start with overview books.
 
@@ -169,7 +178,6 @@
     A.~Author.
     \newblock {\em Handbook of Everything}.
     \newblock Some Press, 1990.
-
 
     \beamertemplatearticlebibitems
     % Followed by interesting articles. Keep the list short.
@@ -181,5 +189,7 @@
     2000.
   \end{thebibliography}
 \end{frame}
+
+%----------------------------------------------------------------------------------------
 
 \end{document}

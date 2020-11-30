@@ -43,9 +43,10 @@
 \RequirePackage{wrapfig} % Allows in-line images
 
 \RequirePackage{booktabs} % Required for better horizontal rules in tables
-\RequirePackage{tabularx}
-\RequirePackage{multirow}
-\RequirePackage{diagbox}
+\RequirePackage{tabularx} % Better tabular environment
+\RequirePackage{multirow} % Required for merging tabular cells
+\RequirePackage{diagbox} % Required for drawing diagonal lines in tabular cells
+\RequirePackage{makecell} % Required for creating multilined tabular cells
 
 \RequirePackage{enumitem} % Required for list customisation
 \setlist{noitemsep} % No spacing between list items

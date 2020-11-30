@@ -30,7 +30,10 @@
 \addbibresource{references.bib}
 
 \if@Chinese
-  \RequirePackage{xeCJK} % Required for CJK
+  \RequirePackage{iftex}
+  \ifXeTeX
+    \RequirePackage{xeCJK} % Required for CJK
+  \fi
   \renewcommand{\labelitemi}{\ensuremath{\bullet}}
   \DeclarePrintbibliographyDefaults{title=参考文献}
 \else

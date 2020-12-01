@@ -51,6 +51,11 @@
 \RequirePackage{multirow} % Required for merging tabular cells
 \RequirePackage{diagbox} % Required for drawing diagonal lines in tabular cells
 \RequirePackage{makecell} % Required for creating multilined tabular cells
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{J}{>{\justifying\arraybackslash}X}
 
 \RequirePackage{enumitem} % Required for list customisation
 \setlist{noitemsep} % No spacing between list items

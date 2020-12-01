@@ -129,8 +129,8 @@
 \RequirePackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
 \addbibresource{references.bib}
 
+\RequirePackage{iftex} % Required for checking which engine is being used
 \if@Chinese
-  \RequirePackage{iftex}
   \ifXeTeX
     \RequirePackage{xeCJK} % Required for CJK
   \fi
@@ -143,8 +143,7 @@
 \RequirePackage[T1]{fontenc} % Output font encoding for international characters
 \RequirePackage{times} % Use the Times font
 \newcommand{\Monospace}{\ttfamily}
-\ifPDFTeX
-\else
+\ifTUTeX % XeTeX or LuaTeX
   \RequirePackage{fontspec} % Required for finding font files
   \IfFontExistsTF{Menlo} {
     \newfontfamily\Menlo{Menlo}

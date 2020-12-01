@@ -29,8 +29,8 @@
 \RequirePackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
 \addbibresource{references.bib}
 
+\RequirePackage{iftex} % Required for checking which engine is being used
 \if@Chinese
-  \RequirePackage{iftex}
   \ifXeTeX
     \RequirePackage{xeCJK} % Required for CJK
   \fi

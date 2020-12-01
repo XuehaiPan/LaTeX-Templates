@@ -2,7 +2,7 @@
 
 A collection of LaTeX templates.
 
-## Editor Preparation ([screenshot](#screenshot))
+## Editor Preparation ([screenshots](#screenshots))
 
 ### 1. Install VS Code and Extensions
 
@@ -22,7 +22,7 @@ You can find them in Visual Studio Code Marketplace (`Ctrl / Cmd + Shift + X`).
 # clone this repository
 git clone https://github.com/XuehaiPan/LaTeX-Templates.git
 
-# open the project with vscode
+# open the project with VS Code
 code LaTeX-Templates
 ```
 
@@ -33,18 +33,19 @@ Then install recommended extensions in [`".vscode/extensions.json"`](.vscode/ext
 ### 3. Compile and Preview with LaTeX Workshop
 
 ```bash
-code --new-window Assignment   # open a template folder using vscode
+code --new-window Assignment   # open a template folder using VS Code
 ```
 
-Open the `main.tex` file in vscode tab, then compile it with LaTeX-Workshop extension tool in the left panel, or use keyboard shortcut: `Ctrl / Cmd + Alt + B`. Get more about the extension features from [wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki).
+Open the `main.tex` file in a VS Code tab, then compile it with LaTeX-Workshop extension tool in the left panel, or use keyboard shortcut: `Ctrl / Cmd + Alt + B`. Get more about the extension features from [wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki).
 
 Useful keyboard shortcuts (may be overridden by keymap settings):
 
+- View LaTeX PDF file (`Ctrl / Cmd + Alt + V`)
 - Build with last used recipe (`Ctrl / Cmd + Alt + B`)
 - Clean up auxiliary files (`Ctrl / Cmd + Alt + C`)
-- SyncTeX from TeX to PDF (`Ctrl / Cmd + Alt + J`)
-- SyncTeX from PDF to TeX (hold `Ctrl` key and click the PDF in the preview panel)
-- Format source files using LaTeXIndent (`Ctrl / Cmd + Shift + I`)
+- SyncTeX from cursor in TeX file to PDF (`Ctrl / Cmd + Alt + J`)
+- SyncTeX from PDF to TeX file (hold `Ctrl / Cmd` key and click on PDF in the preview panel)
+- Format source files using latexindent (`Ctrl / Cmd + Shift + I`)
 
 ### * Manual Compilation
 
@@ -80,6 +81,18 @@ xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
 xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
 ```
 
-## Screenshot
+## Screenshots
 
-![screenshot](https://user-images.githubusercontent.com/16078332/100626383-bb77ce00-3360-11eb-9b63-ba5769dcd882.png)
+- set `"latex-workshop.view.pdf.viewer": "tab"`
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/16078332/100730349-ea478000-3404-11eb-8e7c-31407980eefa.png">
+  View PDF in a VS Code tab.
+</p>
+
+- set `"latex-workshop.view.pdf.viewer": "external" // or "browser"`
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/16078332/100730404-f92e3280-3404-11eb-9f7b-72f2727905bf.png">
+  View PDF in the external viewer or web browser (for multiple monitor setup).
+</p>

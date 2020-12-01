@@ -46,7 +46,8 @@
 \RequirePackage{wrapfig} % Allows in-line images
 
 \RequirePackage{booktabs} % Required for better horizontal rules in tables
-\RequirePackage{tabularx} % Better tabular environment
+\RequirePackage{tabularx} % Better tabular* environment
+\RequirePackage{tabulary} % Better tabular* environment
 \RequirePackage{multirow} % Required for merging tabular cells
 \RequirePackage{diagbox} % Required for drawing diagonal lines in tabular cells
 \RequirePackage{makecell} % Required for creating multilined tabular cells

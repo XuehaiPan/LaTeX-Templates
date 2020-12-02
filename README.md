@@ -1,8 +1,8 @@
 # LaTeX Templates
 
-A collection of LaTeX templates.
+A collection of LaTeX templates. ([screenshots](#screenshots))
 
-## Editor Preparation ([screenshots](#screenshots))
+## Editor Preparation
 
 ### 1. Install VS Code and Extensions
 
@@ -83,8 +83,42 @@ xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
 
 ## Screenshots
 
-- set `"latex-workshop.view.pdf.viewer": "tab"`
+### Templates
 
+---
+
+<table>
+  <tr>
+    <td align="center">Assignment</td>
+    <td align="center">Essay</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://user-images.githubusercontent.com/16078332/100871042-90b18500-34da-11eb-8ca4-9982e2df2a62.gif">
+    </td>
+    <td align="center">
+      <img src="https://user-images.githubusercontent.com/16078332/100871056-9313df00-34da-11eb-849f-7958169efe39.gif">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">Presentation</td>
+    <td align="center">NeurIPS 2020</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://user-images.githubusercontent.com/16078332/100871065-95763900-34da-11eb-9d5a-1a1bb197478b.gif">
+    </td>
+    <td align="center">
+      <img src="https://user-images.githubusercontent.com/16078332/100871069-96a76600-34da-11eb-87c8-63460d878e6b.gif">
+    </td>
+  </tr>
+</table>
+
+### Workspace
+
+---
+
+- set `"latex-workshop.view.pdf.viewer": "tab"`
 <p align="center">
   <img src="https://user-images.githubusercontent.com/16078332/100730349-ea478000-3404-11eb-8e7c-31407980eefa.png">
   View PDF in a VS Code tab.

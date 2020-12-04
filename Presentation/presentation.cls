@@ -171,7 +171,7 @@
   \renewcommand{\listingscaption}{源代码}
   \renewcommand{\lstlistingname}{源代码}
 \fi
-\usemintedstyle{pastie}
+\usemintedstyle{colorful}
 \setminted{
   linenos=true,
   numbers=left,

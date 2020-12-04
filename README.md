@@ -4,7 +4,45 @@ A collection of LaTeX templates. ([screenshots](#screenshots))
 
 ## Editor Preparation
 
-### 1. Install VS Code and Extensions
+### 1. Preliminaries
+
+Download and install a TeX distribution ([TeX Live](https://www.tug.org/texlive/) for example) on your device.
+
+#### Install TeX Live
+
+- Windows: download the TeX Live installer [install-tl-windows.exe](http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe) and invoke it. Or install TeX Live using Chocolatey:
+
+```powerShell
+choco install texlive
+```
+
+- macOS: install MacTeX using HomeBrew:
+
+```bash
+brew install --cask mactex
+```
+
+- Linux: manual installation:
+
+```bash
+wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+tar xf install-tl-unx.tar.gz
+cd install-tl-yyyymmdd
+sudo ./install
+```
+
+#### (Optional) Install Dependencies for minted and latexindent
+
+```bash
+# Install Pygments for code highlighting with minted in LaTeX
+pip3 install Pygments # For Windows / macOS / Linux
+brew install pygments # For macOS
+
+# Install dependencies for latexindent
+cpan -i File::HomeDir Log::Log4perl Log::Dispatch::File YAML::Tiny Unicode::GCString
+```
+
+### 2. Install VS Code and Extensions
 
 **Visual Studio Code** is strongly recommended as editor for LaTeX projects. You can download and install it from the official site [https://code.visualstudio.com](https://code.visualstudio.com).
 
@@ -16,7 +54,7 @@ Recommended extensions:
 
 You can find them in Visual Studio Code Marketplace (`Ctrl / Cmd + Shift + X`).
 
-### 2. Setup Editor for LaTeX Projects
+### 3. Setup Editor for LaTeX Projects
 
 ```bash
 # clone this repository
@@ -30,7 +68,7 @@ Then install recommended extensions in [`".vscode/extensions.json"`](.vscode/ext
 
 ## Usage
 
-### 3. Compile and Preview with LaTeX Workshop
+### 4. Compile and Preview with LaTeX Workshop
 
 ```bash
 code --new-window Assignment   # open a template folder using VS Code

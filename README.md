@@ -12,8 +12,8 @@ Download and install a TeX distribution ([TeX Live](https://www.tug.org/texlive/
 
 - Windows: download the TeX Live installer [install-tl-windows.exe](http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe) and invoke it. Or install TeX Live using Chocolatey:
 
-```powerShell
-choco install texlive
+```powershell
+choco install texlive --params="'/scheme:full'"
 ```
 
 - macOS: install MacTeX using HomeBrew:

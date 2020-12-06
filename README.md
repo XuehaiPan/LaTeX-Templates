@@ -16,7 +16,7 @@ Download and install a TeX distribution ([TeX Live](https://www.tug.org/texlive/
 choco install texlive --params="'/scheme:full'"
 ```
 
-- macOS: install MacTeX using HomeBrew:
+- macOS: install MacTeX using Homebrew:
 
 ```bash
 brew install --cask mactex
@@ -28,7 +28,7 @@ brew install --cask mactex
 wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 tar xf install-tl-unx.tar.gz
 cd install-tl-yyyymmdd
-sudo ./install
+sudo ./install-tl
 ```
 
 #### (Optional) Install Dependencies for minted and latexindent

@@ -27,6 +27,7 @@
   \DeclareOption{UTF8}{\PassOptionsToClass{UTF8}{\@DocumentClass}}
 }
 
+\PassOptionsToPackage{table,hyperref}{xcolor}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{\@DocumentClass}}
 
 \ProcessOptions\relax
@@ -144,6 +145,20 @@
 
 \RequirePackage{multicol} % Required for switching between one and multicolumn format
 
+\RequirePackage{booktabs} % Required for better horizontal rules in tables
+\RequirePackage{boldline} % Required for better horizontal and vertical rules in tables
+\RequirePackage{tabularx} % Better tabular* environment
+\RequirePackage{tabulary} % Better tabular* environment
+\RequirePackage{multirow} % Required for merging tabular cells
+\RequirePackage{diagbox} % Required for drawing diagonal lines in tabular cells
+\RequirePackage{makecell} % Required for creating multilined tabular cells
+\RequirePackage[table,hyperref]{xcolor} % Required for coloring rows, columns, and cells within tables
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{J}{>{\justifying\arraybackslash}X}
+
 \RequirePackage{graphicx} % Required for including images
 \RequirePackage{animate} % Required for including animated graphics
 \RequirePackage{wrapfig} % Allows in-line images
@@ -156,24 +171,10 @@
 \RequirePackage{tikz} % Required for creating graphics
 \usetikzlibrary{positioning,shapes.geometric}
 
-\RequirePackage{booktabs} % Required for better horizontal rules in tables
-\RequirePackage{boldline} % Required for better horizontal and vertical rules in tables
-\RequirePackage{tabularx} % Better tabular* environment
-\RequirePackage{tabulary} % Better tabular* environment
-\RequirePackage{multirow} % Required for merging tabular cells
-\RequirePackage{diagbox} % Required for drawing diagonal lines in tabular cells
-\RequirePackage{makecell} % Required for creating multilined tabular cells
-\renewcommand{\tabularxcolumn}[1]{m{#1}}
-\newcolumntype{C}{>{\centering\arraybackslash}X}
-\newcolumntype{L}{>{\raggedright\arraybackslash}X}
-\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
-\newcolumntype{J}{>{\justifying\arraybackslash}X}
-
 \RequirePackage{algorithm} % Required for insertion of code
 \RequirePackage{algpseudocode}
 \RequirePackage[final]{listings}
 \RequirePackage[final=true]{minted}
-\RequirePackage{xcolor}
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
 \if@Chinese

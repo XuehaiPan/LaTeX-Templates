@@ -162,8 +162,8 @@
 
 \RequirePackage{algorithm} % Required for insertion of code
 \RequirePackage{algpseudocode}
-\RequirePackage{minted}
-\RequirePackage{listings}
+\RequirePackage[final]{listings}
+\RequirePackage[final=true]{minted}
 \RequirePackage{xcolor}
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
@@ -171,27 +171,29 @@
   \renewcommand{\listingscaption}{源代码}
   \renewcommand{\lstlistingname}{源代码}
 \fi
-\usemintedstyle{colorful}
-\setminted{
-  linenos=true,
-  numbers=left,
-  autogobble=true,
-  python3=true,
-  showspaces=false,
-  tabsize=4,
-  fontsize=\footnotesize
-}
 \lstset{
-  basicstyle=\small\Monospace,
+  basicstyle={\small\Monospace},
   numbersep=12pt,
   numbers=left,
-  numberstyle=\scriptsize\Monospace,
+  numberstyle={\scriptsize\Monospace},
   showspaces=false,
   showstringspaces=false,
   tabsize=4,
   breaklines=true,
   breakatwhitespace=true
 }
+\usemintedstyle{colorful}
+\setminted{
+  bgcolor={black!5},
+  linenos=true,
+  numbers=left,
+  autogobble=true,
+  python3=true,
+  showspaces=false,
+  tabsize=4,
+  fontsize={\footnotesize}
+}
+\setmintedinline{fontsize={\smaller}}
 
 \RequirePackage{amsmath,amssymb,amsfonts} % Required for math
 \RequirePackage{mathtools}

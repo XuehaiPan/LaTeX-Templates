@@ -181,8 +181,8 @@
 
 \RequirePackage{algorithm} % Required for insertion of code
 \RequirePackage{algpseudocode}
-\RequirePackage{minted}
-\RequirePackage{listings}
+\RequirePackage[final]{listings}
+\RequirePackage[final=true]{minted}
 \RequirePackage{xcolor}
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
@@ -190,8 +190,21 @@
   \renewcommand{\listingscaption}{源代码}
   \renewcommand{\lstlistingname}{源代码}
 \fi
+\lstset{
+  frame=tbTB,
+  basicstyle={\small\Monospace},
+  numbersep=12pt,
+  numbers=left,
+  numberstyle={\scriptsize\Monospace},
+  showspaces=false,
+  showstringspaces=false,
+  tabsize=4,
+  breaklines=true,
+  breakatwhitespace=true
+}
 \usemintedstyle{colorful}
 \setminted{
+  bgcolor={black!5},
   frame=lines,
   labelposition=all,
   linenos=true,
@@ -200,20 +213,9 @@
   python3=true,
   showspaces=false,
   tabsize=4,
-  fontsize=\footnotesize
+  fontsize={\footnotesize}
 }
-\lstset{
-  frame=tbTB,
-  basicstyle=\small\Monospace,
-  numbersep=12pt,
-  numbers=left,
-  numberstyle=\scriptsize\Monospace,
-  showspaces=false,
-  showstringspaces=false,
-  tabsize=4,
-  breaklines=true,
-  breakatwhitespace=true
-}
+\setmintedinline{fontsize={\smaller}}
 
 \RequirePackage{enumitem} % To modify the enumerate environment
 

@@ -157,6 +157,8 @@
   }
 \fi
 
+\RequirePackage{multicol} % Required for switching between one and multicolumn format
+
 \RequirePackage{graphicx} % Required for including images
 \graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)
 
@@ -168,6 +170,7 @@
 \usetikzlibrary{positioning,shapes.geometric}
 
 \RequirePackage{booktabs} % Required for better horizontal rules in tables
+\RequirePackage{boldline} % Required for better horizontal and vertical rules in tables
 \RequirePackage{tabularx} % Better tabular* environment
 \RequirePackage{tabulary} % Better tabular* environment
 \RequirePackage{multirow} % Required for merging tabular cells

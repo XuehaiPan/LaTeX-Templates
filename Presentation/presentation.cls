@@ -85,6 +85,10 @@
 % \setbeamertemplate{headline}{}
 \setbeamertemplate{footline}{}
 
+% Set footnote font size and symbols
+\setbeamerfont{footnote}{size=\tiny}
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
 % Add frame numbers to navigation symbols
 \addtobeamertemplate{navigation symbols}{}{
   \bfseries \hspace{0.2em}
@@ -138,7 +142,10 @@
   }
 \fi
 
+\RequirePackage{multicol} % Required for switching between one and multicolumn format
+
 \RequirePackage{graphicx} % Required for including images
+\RequirePackage{animate} % Required for including animated graphics
 \graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)
 
 \RequirePackage[absolute,overlay]{textpos} % Required for creating text blocks
@@ -149,6 +156,7 @@
 \usetikzlibrary{positioning,shapes.geometric}
 
 \RequirePackage{booktabs} % Required for better horizontal rules in tables
+\RequirePackage{boldline} % Required for better horizontal and vertical rules in tables
 \RequirePackage{tabularx} % Better tabular* environment
 \RequirePackage{tabulary} % Better tabular* environment
 \RequirePackage{multirow} % Required for merging tabular cells

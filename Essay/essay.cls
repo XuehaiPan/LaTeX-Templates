@@ -26,7 +26,7 @@
 % PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\RequirePackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
+\RequirePackage[backend=biber,sorting=anyvt]{biblatex} % Required for Biber
 \addbibresource{references.bib}
 
 \RequirePackage{iftex} % Required for checking which engine is being used

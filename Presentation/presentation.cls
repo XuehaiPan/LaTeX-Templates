@@ -92,7 +92,7 @@
 }
 
 \usecolortheme{beaver}
-\definecolor{darkred}{rgb}{0.7, 0, 0} % Make the red color darker and appear more like the PKU red {0.6, 0, 0}
+\definecolor{darkred}{rgb}{0.7,0.0,0.0} % Make the red color darker and appear more like the PKU red {0.6,0.0,0.0}
 
 % If you have a file called "university-logo-filename.xxx", where xxx
 % is a graphic format that can be processed by latex or pdflatex,
@@ -101,13 +101,13 @@
 % \pgfdeclareimage[height=0.8cm]{PKU-logo}{figures/PKU-logo.eps}
 % \logo{\pgfuseimage{PKU-logo}}
 \addtobeamertemplate{frametitle}{}{
-  \begin{textblock*}{2.2cm}[1, 0](\paperwidth-0.2cm, 0.6cm)
+  \begin{textblock*}{2.2cm}[1,0](\paperwidth-0.2cm,0.6cm)
     \includegraphics[width=2.2cm]{figures/PKU-logo.eps}
   \end{textblock*}
 }
 
 % Template-specific packages
-\RequirePackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
+\RequirePackage[backend=biber,sorting=anyvt]{biblatex} % Required for Biber
 \addbibresource{references.bib}
 
 \RequirePackage{iftex} % Required for checking which engine is being used
@@ -141,12 +141,12 @@
 \RequirePackage{graphicx} % Required for including images
 \graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)
 
-\RequirePackage[absolute, overlay]{textpos} % Required for creating text blocks
+\RequirePackage[absolute,overlay]{textpos} % Required for creating text blocks
 \RequirePackage{float} % Better floating style for figures & tables
 \RequirePackage[justification=centering]{caption} % To modify the captions
 \RequirePackage{subcaption} % Allows subcaptions
 \RequirePackage{tikz} % Required for creating graphics
-\usetikzlibrary{positioning, shapes.geometric}
+\usetikzlibrary{positioning,shapes.geometric}
 
 \RequirePackage{booktabs} % Required for better horizontal rules in tables
 \RequirePackage{tabularx} % Better tabular* environment
@@ -193,7 +193,7 @@
   breakatwhitespace=true
 }
 
-\RequirePackage{amsmath, amssymb, amsfonts} % Required for math
+\RequirePackage{amsmath,amssymb,amsfonts} % Required for math
 \RequirePackage{mathtools}
 \RequirePackage{mathrsfs}
 \RequirePackage{physics}

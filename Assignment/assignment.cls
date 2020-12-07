@@ -82,7 +82,7 @@
 % Geometry lets us modify the sizes of the document nicely
 \RequirePackage{geometry}
 % Decent margins for the documents, as it is meant to be printed
-\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 
 % Header and footers, we will use the titles also
 \RequirePackage{fancyhdr} % Required for customising headers and footers
@@ -126,7 +126,7 @@
 }
 
 % Template-specific packages
-\RequirePackage[backend=biber, sorting=anyvt]{biblatex} % Required for Biber
+\RequirePackage[backend=biber,sorting=anyvt]{biblatex} % Required for Biber
 \addbibresource{references.bib}
 
 \RequirePackage{iftex} % Required for checking which engine is being used
@@ -165,7 +165,7 @@
 \RequirePackage[justification=centering]{caption} % To modify the captions
 \RequirePackage{subcaption} % Allows subcaptions
 \RequirePackage{tikz} % Required for creating graphics
-\usetikzlibrary{positioning, shapes.geometric}
+\usetikzlibrary{positioning,shapes.geometric}
 
 \RequirePackage{booktabs} % Required for better horizontal rules in tables
 \RequirePackage{tabularx} % Better tabular* environment
@@ -219,7 +219,7 @@
 
 \RequirePackage{hyperref} % Required for hyperlinks
 
-\RequirePackage{amsmath, amssymb, amsfonts} % Required for math
+\RequirePackage{amsmath,amssymb,amsfonts} % Required for math
 \RequirePackage{mathtools}
 \RequirePackage{mathrsfs}
 \RequirePackage{physics}

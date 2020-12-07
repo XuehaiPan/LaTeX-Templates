@@ -146,6 +146,7 @@
 
 \RequirePackage{graphicx} % Required for including images
 \RequirePackage{animate} % Required for including animated graphics
+\RequirePackage{wrapfig} % Allows in-line images
 \graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)
 
 \RequirePackage[absolute,overlay]{textpos} % Required for creating text blocks

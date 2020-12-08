@@ -1,6 +1,6 @@
 # LaTeX Templates
 
-A collection of LaTeX templates. ([screenshots](#screenshots))
+A collection of LaTeX templates, with VS Code settings for LaTeX Workshop. ([screenshots](#screenshots))
 
 ## Editor Preparation
 

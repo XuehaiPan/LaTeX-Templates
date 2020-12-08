@@ -97,7 +97,7 @@
 }
 
 \usecolortheme{beaver}
-\definecolor{darkred}{cmyk}{0.0,1.0,1.0,0.3} % Make the red color darker and appear more like the PKU red (C0M100Y100K45)
+\definecolor{darkred}{rgb}{0.7,0.0,0.0} % Make the red color darker and appear more like the PKU red (C0M100Y100K45)
 
 % If you have a file called "university-logo-filename.xxx", where xxx
 % is a graphic format that can be processed by latex or pdflatex,
@@ -105,7 +105,7 @@
 % \pgfdeclareimage[height=0.8cm]{PKU-logo}{figures/PKU-logo.eps}
 % \logo{\pgfuseimage{PKU-logo}}
 \addtobeamertemplate{frametitle}{}{
-  \begin{textblock*}{0.5\paperwidth}[1.0,0.5](\paperwidth-0.2cm,0.885cm)
+  \begin{textblock*}{0.5\paperwidth}[1.0,0.5](\paperwidth-0.2cm,0.9cm)
     \raggedleft
     \includegraphics[height=0.6cm]{figures/PKU-logo.eps}
   \end{textblock*}

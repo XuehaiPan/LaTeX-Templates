@@ -172,6 +172,9 @@
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
 \newcolumntype{J}{>{\justifying\arraybackslash}X}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{B}[1]{>{\centering\arraybackslash}b{#1}}
 
 \RequirePackage{graphicx} % Required for including images
 \graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)

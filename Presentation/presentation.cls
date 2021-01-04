@@ -177,7 +177,7 @@
 \RequirePackage{algorithm} % Required for insertion of code
 \RequirePackage{algpseudocode}
 \RequirePackage[final]{listings}
-\RequirePackage[final=true]{minted}
+\RequirePackage[cachedir={out/_minted-\jobname},final=true]{minted}
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
 \if@Chinese

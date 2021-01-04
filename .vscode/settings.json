@@ -73,6 +73,10 @@
         "-output-directory=%OUTDIR%",
         "%DOC%"
     ],
+    "latex-workshop.latex.magic.bib.args": [
+        "--output-directory=%OUTDIR%",
+        "%DOCFILE%"
+    ],
     "latex-workshop.latex.tools": [
         {
             "name": "pdflatexmk",

@@ -94,29 +94,29 @@ cd Assignment   # to a template folder
 #### Compile with Latexmk (Recommended)
 
 ```bash
-latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
+latexmk -xelatex -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -output-directory=out main
 ```
 
 - clean up auxiliary files
 
 ```bash
-latexmk -c
+latexmk -c -output-directory=out
 ```
 
 - build and do cleanup if failed
 
 ```bash
-latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main || latexmk -c
+latexmk -xelatex -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -output-directory=out main || latexmk -c -output-directory=out
 ```
 
 #### Compile with XeLaTeX and Biber
 
 ```bash
 # XeLaTeX ➞ Biber ➞ XeLaTeX × 2
-xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
-biber main
-xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
-xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
+xelatex -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -output-directory=out main
+biber --output-directory=out main
+xelatex -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -output-directory=out main
+xelatex -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -output-directory=out main
 ```
 
 ## Screenshots
@@ -157,6 +157,7 @@ xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape main
 ---
 
 - set `"latex-workshop.view.pdf.viewer": "tab"`
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/16078332/100730349-ea478000-3404-11eb-8e7c-31407980eefa.png">
   View PDF in a VS Code tab.

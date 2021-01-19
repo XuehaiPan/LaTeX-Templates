@@ -64,7 +64,7 @@ git clone https://github.com/XuehaiPan/LaTeX-Templates.git
 code LaTeX-Templates
 ```
 
-Then install recommended extensions in [`".vscode/extensions.json"`](.vscode/extensions.json), and copy the settings in [`".vscode/settings.json"`](.vscode/settings.json) to your user settings. Refer to [XuehaiPan/OS-Setup/my-vscode-settings](https://github.com/XuehaiPan/OS-Setup/blob/master/my-vscode-settings/settings.json) as a reference.
+Then install recommended extensions in [`".vscode/extensions.json"`](.vscode/extensions.json), and copy the settings in [`".vscode/settings.json"`](.vscode/settings.json) to your user settings. Refer to [XuehaiPan/Dev-Setup/my-vscode-settings](https://github.com/XuehaiPan/Dev-Setup/blob/master/my-vscode-settings/settings.json) as a reference.
 
 ## Usage
 

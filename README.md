@@ -6,32 +6,32 @@ A collection of LaTeX templates, with VS Code settings for LaTeX Workshop. ([scr
 
 ### 1. Preliminaries
 
-Download and install a TeX distribution ([TeX Live](https://www.tug.org/texlive/) for example) on your device.
+Download and install a TeX distribution (e.g., [TeX Live](https://www.tug.org/texlive/)) on your device.
 
 #### Install TeX Live
 
-- Windows: download the TeX Live installer [install-tl-windows.exe](http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe) and invoke it. Or install TeX Live using Chocolatey:
+**Windows:** download the TeX Live installer [install-tl-windows.exe](http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe) and invoke it. Or install TeX Live using [Chocolatey](https://chocolatey.org):
 
 ```powershell
 choco install texlive --params="'/scheme:full'"
 ```
 
-- macOS: install MacTeX using Homebrew:
+**macOS:** install MacTeX using [Homebrew](https://brew.sh):
 
 ```bash
 brew install --cask mactex
 ```
 
-- Linux: manual installation:
+**Linux:** manual installation:
 
 ```bash
 wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 tar xf install-tl-unx.tar.gz
-cd install-tl-yyyymmdd
+cd install-tl-<yyyymmdd>
 sudo ./install-tl
 ```
 
-#### (Optional) Install Dependencies for minted and latexindent
+#### *(Optional) Install dependencies for minted and latexindent*
 
 ```bash
 # Install Pygments for code highlighting with minted in LaTeX

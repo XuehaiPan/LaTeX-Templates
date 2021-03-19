@@ -93,7 +93,7 @@
 % Add frame numbers to navigation symbols
 \addtobeamertemplate{navigation symbols}{}{
   \bfseries \hspace{0.2em}
-  \raisebox{0.5em}[0em][0em]{\insertframenumber/\inserttotalframenumber}
+  \raisebox{0.5em}[0em][0em]{\insertframenumber\,/\,\inserttotalframenumber}
 }
 
 \usecolortheme{beaver}
@@ -105,9 +105,30 @@
 % \pgfdeclareimage[height=0.8cm]{PKU-logo}{figures/PKU-logo.eps}
 % \logo{\pgfuseimage{PKU-logo}}
 \addtobeamertemplate{frametitle}{}{
-  \begin{textblock*}{0.5\paperwidth}[1.0,0.5](\paperwidth-0.2cm,0.9cm)
+  \let\@headlineheight\relax
+  \let\@frametitleheight\relax
+  \newlength{\@headlineheight}
+  \newlength{\@frametitleheight}
+  \usebeamerfont{headline}
+  \setlength{\@headlineheight}{4.3ex}
+  \settoheight{\@frametitleheight}{\strutbox{\usebeamerfont{frametitle}\insertframetitle}}
+  \usebeamerfont{frametitle}
+  \addtolength{\@frametitleheight}{\baselineskip+0.6cm-3ex}
+  \if@Chinese
+    \addtolength{\@frametitleheight}{0.1ex}
+  \fi
+  \ifx\insertframesubtitle\@empty
+  \else
+    \let\@framesubtitleheight\relax
+    \newlength{\@framesubtitleheight}
+    \settoheight{\@framesubtitleheight}{\strutbox{\usebeamerfont{framesubtitle}\insertframesubtitle}}
+    \addtolength{\@frametitleheight}{\@framesubtitleheight}
+    \usebeamerfont{framesubtitle}
+  \addtolength{\@frametitleheight}{0.5\baselineskip}
+  \fi
+  \begin{textblock*}{0.5\paperwidth}[1.0,0.5](\paperwidth-0.2cm,\@headlineheight+0.5\@frametitleheight)
     \raggedleft
-    \includegraphics[height=0.6cm]{figures/PKU-logo.eps}
+    \includegraphics[height=0.4cm+0.25\@frametitleheight]{figures/PKU-logo.eps}
   \end{textblock*}
 }
 

@@ -41,7 +41,7 @@
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
 
-\date{Conference Name, 2020}
+\date{Conference Name, 2021}
 % - Either use conference name or its abbreviation.
 % - Not really informative to the audience, more for people (including
 %   yourself) who are reading the slides online
@@ -73,9 +73,17 @@
 % Let's get started
 \begin{document}
 
-\begin{frame}
-  \titlepage
-\end{frame}
+{
+  \usebackgroundtemplate{
+    \begin{textblock*}{0.8\paperheight}[1.0,0.775](\paperwidth,\paperheight)
+      \tikz\node[opacity=0.05]{\pgfuseimage{logo}};
+    \end{textblock*}
+  }
+
+  \begin{frame}
+    \titlepage
+  \end{frame}
+}
 
 \begin{frame}{Outline}
   \tableofcontents

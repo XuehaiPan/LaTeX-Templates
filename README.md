@@ -1,6 +1,6 @@
 # LaTeX Templates
 
-A collection of LaTeX templates, with VS Code settings for LaTeX Workshop. ([screenshots](#screenshots))
+A collection of LaTeX templates in English/Chinese, with VS Code settings for LaTeX Workshop. ([screenshots](#screenshots))
 
 ## Editor Preparation
 
@@ -167,5 +167,5 @@ xelatex -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -outp
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/16078332/100730404-f92e3280-3404-11eb-9f7b-72f2727905bf.png">
-  View PDF in the external viewer or web browser (for multiple monitor setup).
+  View PDF in the external viewer or a web browser (for multi-monitor setup).
 </p>

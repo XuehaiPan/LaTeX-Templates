@@ -17,6 +17,10 @@
   \DeclareOption{UTF8}{\PassOptionsToClass{UTF8}{\@DocumentClass}}
 }
 
+\newcommand{\@PaperSize}{a4paper}
+\DeclareOption{a4paper}{\renewcommand{\@PaperSize}{a4paper}}
+\DeclareOption{letterpaper}{\renewcommand{\@PaperSize}{letterpaper}}
+
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{\@DocumentClass}} % Pass through any options to the base class
 \ProcessOptions\relax % Process given options
 
@@ -77,7 +81,7 @@
 \RequirePackage{geometry} % Required for adjusting page dimensions and margins
 
 \geometry{
-  paper=a4paper, % Paper size, change to letterpaper for US letter size
+  paper={\@PaperSize}, % Paper size, change to letterpaper for US letter size
   top=2.5cm, % Top margin
   bottom=3cm, % Bottom margin
   left=2.5cm, % Left margin

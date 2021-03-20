@@ -2,15 +2,28 @@
 
 A collection of LaTeX templates in English/Chinese, with VS Code settings for LaTeX Workshop. ([screenshots](#screenshots))
 
+## Table of Contents  <!-- omit in toc -->
+
+- [Editor Preparation](#editor-preparation)
+  - [1. Preliminaries](#1-preliminaries)
+  - [2. Install VS Code and Extensions](#2-install-vs-code-and-extensions)
+  - [3. Setup Editor for LaTeX Projects](#3-setup-editor-for-latex-projects)
+- [Usage](#usage)
+  - [4. Compile and Preview with LaTeX Workshop](#4-compile-and-preview-with-latex-workshop)
+  - [* Manual Compilation](#-manual-compilation)
+    - [Compile with Latexmk (Recommended)](#compile-with-latexmk-recommended)
+    - [Compile with XeLaTeX and Biber](#compile-with-xelatex-and-biber)
+- [Screenshots](#screenshots)
+
 ## Editor Preparation
 
 ### 1. Preliminaries
 
 Download and install a TeX distribution (e.g., [TeX Live](https://www.tug.org/texlive/)) on your device.
 
-#### Install TeX Live
+#### Install TeX Live  <!-- omit in toc -->
 
-**Windows:** download the TeX Live installer [install-tl-windows.exe](http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe) and invoke it. Or install TeX Live using [Chocolatey](https://chocolatey.org):
+**Windows:** download and invoke the TeX Live installer [install-tl-windows.exe](http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe). Or install TeX Live using [Chocolatey](https://chocolatey.org):
 
 ```powershell
 choco install texlive --params="'/scheme:full'"
@@ -25,42 +38,43 @@ brew install --cask mactex
 **Linux:** manual installation:
 
 ```bash
-wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
-tar xf install-tl-unx.tar.gz
-cd install-tl-<yyyymmdd>
+wget -O - http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz |
+    tar -xz --strip-components=1 --one-top-level=install-tl-unx &&
+    cd install-tl-unx
 sudo ./install-tl
 ```
 
-#### *(Optional) Install dependencies for minted and latexindent*
+#### *(Optional) Install dependencies for minted and latexindent*  <!-- omit in toc -->
 
 ```bash
 # Install Pygments for code highlighting with minted in LaTeX
-pip3 install Pygments # For Windows / macOS / Linux
-brew install pygments # For macOS
+pip3 install Pygments  # for Windows / macOS / Linux
+brew install pygments  # for macOS
 
 # Install dependencies for latexindent
-cpan -i File::HomeDir Log::Log4perl Log::Dispatch::File YAML::Tiny Unicode::GCString
+cpan -i File::HomeDir Log::Log4perl Log::Dispatch::File \
+        YAML::Tiny Unicode::GCString
 ```
 
 ### 2. Install VS Code and Extensions
 
-**Visual Studio Code** is strongly recommended as editor for LaTeX projects. You can download and install it from the official site [https://code.visualstudio.com](https://code.visualstudio.com).
+**Visual Studio Code** is strongly recommended as the editor for LaTeX projects. You can download and install it from the official site at [https://code.visualstudio.com](https://code.visualstudio.com).
 
 Recommended extensions:
 
 - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop): boost LaTeX typesetting efficiency with preview, compile, autocomplete, colorize, and more.
-- [Local History](https://marketplace.visualstudio.com/items?itemName=xyz.local-history): maintain local history of files.
-- [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2): colorize matching brackets.
+- [Local History](https://marketplace.visualstudio.com/items?itemName=xyz.local-history) (optional): maintain local history of files.
+- [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) (optional): colorize matching brackets.
 
 You can find them in Visual Studio Code Marketplace (`Ctrl / Cmd + Shift + X`).
 
 ### 3. Setup Editor for LaTeX Projects
 
 ```bash
-# clone this repository
-git clone https://github.com/XuehaiPan/LaTeX-Templates.git
+# Clone this repository
+git clone --depth=1 https://github.com/XuehaiPan/LaTeX-Templates.git
 
-# open the project with VS Code
+# Open the project with VS Code
 code LaTeX-Templates
 ```
 
@@ -74,9 +88,9 @@ Then install recommended extensions in [`".vscode/extensions.json"`](.vscode/ext
 code --new-window Assignment   # open a template folder using VS Code
 ```
 
-Open the `main.tex` file in a VS Code tab, then compile it with LaTeX-Workshop extension tool in the left panel, or use keyboard shortcut: `Ctrl / Cmd + Alt + B`. Get more about the extension features from [wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki).
+Open the `main.tex` file in a VS Code tab, then compile it with LaTeX-Workshop extension tool in the left panel, or use keyboard shortcut: `Ctrl / Cmd + Alt + B`. See the [wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki) page of LaTeX-Workshop for more details about the extension features.
 
-Useful keyboard shortcuts (may be overridden by keymap settings):
+Some useful keyboard shortcuts (may be overridden by keymap settings):
 
 - View LaTeX PDF file (`Ctrl / Cmd + Alt + V`)
 - Build with last used recipe (`Ctrl / Cmd + Alt + B`)
@@ -94,7 +108,9 @@ cd Assignment   # to a template folder
 #### Compile with Latexmk (Recommended)
 
 ```bash
-latexmk -xelatex -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -output-directory=out main
+latexmk -xelatex -synctex=1 -shell-escape \
+    -interaction=nonstopmode -file-line-error \
+    -output-directory=out main
 ```
 
 - clean up auxiliary files
@@ -106,22 +122,36 @@ latexmk -c -output-directory=out
 - build and do cleanup if failed
 
 ```bash
-latexmk -xelatex -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -output-directory=out main || latexmk -c -output-directory=out
+latexmk -xelatex -synctex=1 -shell-escape \
+    -interaction=nonstopmode -file-line-error \
+    -output-directory=out main ||
+    latexmk -c -output-directory=out
 ```
 
 #### Compile with XeLaTeX and Biber
 
+Execute `xelatex` multiple times to resolve cross-references in the document.
+
 ```bash
 # XeLaTeX ➞ Biber ➞ XeLaTeX × 2
-xelatex -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -output-directory=out main
+xelatex -synctex=1 -shell-escape \
+    -interaction=nonstopmode -file-line-error \
+    -output-directory=out main
+
 biber --output-directory=out main
-xelatex -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -output-directory=out main
-xelatex -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -output-directory=out main
+
+xelatex -synctex=1 -shell-escape \
+    -interaction=nonstopmode -file-line-error \
+    -output-directory=out main
+
+xelatex -synctex=1 -shell-escape \
+    -interaction=nonstopmode -file-line-error \
+    -output-directory=out main
 ```
 
 ## Screenshots
 
-### Templates
+### Templates  <!-- omit in toc -->
 
 ---
 
@@ -152,7 +182,7 @@ xelatex -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -outp
   </tr>
 </table>
 
-### Workspace
+### Workspace  <!-- omit in toc -->
 
 ---
 

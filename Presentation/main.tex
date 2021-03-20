@@ -74,9 +74,11 @@
 \begin{document}
 
 {
+  % Delete this, if you do not want the transparent logo in titlepage.
   \usebackgroundtemplate{
+    \pgfdeclareimage[height=\paperheight]{logo-titlepage}{figures/logo-titlepage.eps}
     \begin{textblock*}{0.8\paperheight}[1.0,0.775](\paperwidth,\paperheight)
-      \tikz\node[opacity=0.05]{\pgfuseimage{logo}};
+      \tikz\node[opacity=0.05]{\pgfuseimage{logo-titlepage}};
     \end{textblock*}
   }
 

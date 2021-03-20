@@ -102,7 +102,7 @@
 % If you have a file called "university-logo-filename.xxx", where xxx
 % is a graphic format that can be processed by latex or pdflatex,
 % resp., then you can add a logo as follows:
-\pgfdeclareimage[height=\paperheight]{logo}{figures/logo.eps}
+% \pgfdeclareimage[height=\paperheight]{logo}{figures/logo.eps}
 % \logo{\pgfuseimage{logo}}
 \addtobeamertemplate{frametitle}{}{
   \let\@headlineheight\relax
@@ -124,11 +124,11 @@
     \settoheight{\@framesubtitleheight}{\strutbox{\usebeamerfont{framesubtitle}\insertframesubtitle}}
     \addtolength{\@frametitleheight}{\@framesubtitleheight}
     \usebeamerfont{framesubtitle}
-  \addtolength{\@frametitleheight}{0.5\baselineskip}
+    \addtolength{\@frametitleheight}{0.5\baselineskip}
   \fi
   \begin{textblock*}{0.5\paperwidth}[1.0,0.5](\paperwidth-0.2cm,\@headlineheight+0.5\@frametitleheight)
     \raggedleft
-    \includegraphics[height=0.4cm+0.25\@frametitleheight]{figures/logo-wide.eps}
+    \includegraphics[height=0.4cm+0.25\@frametitleheight]{figures/logo-frametitle.eps}
   \end{textblock*}
 }
 

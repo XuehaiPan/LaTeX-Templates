@@ -144,7 +144,7 @@ xelatex -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -outp
   </tr>
   <tr>
     <td align="center">
-      <img src="https://user-images.githubusercontent.com/16078332/100871065-95763900-34da-11eb-9d5a-1a1bb197478b.gif">
+      <img src="https://user-images.githubusercontent.com/16078332/111862242-0dd00f80-898f-11eb-8df2-d57fdbac2d1b.gif">
     </td>
     <td align="center">
       <img src="https://user-images.githubusercontent.com/16078332/100871069-96a76600-34da-11eb-87c8-63460d878e6b.gif">
@@ -159,13 +159,13 @@ xelatex -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -outp
 - set `"latex-workshop.view.pdf.viewer": "tab"`
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/16078332/100730349-ea478000-3404-11eb-8e7c-31407980eefa.png">
+  <img src="https://user-images.githubusercontent.com/16078332/111870724-51437180-89c1-11eb-842c-6302b31a6a96.png">
   View PDF in a VS Code tab.
 </p>
 
 - set `"latex-workshop.view.pdf.viewer": "external" // or "browser"`
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/16078332/100730404-f92e3280-3404-11eb-9f7b-72f2727905bf.png">
+  <img src="https://user-images.githubusercontent.com/16078332/111870727-53a5cb80-89c1-11eb-96e4-dcff0e0de78b.png">
   View PDF in the external viewer or a web browser (for multi-monitor setup).
 </p>

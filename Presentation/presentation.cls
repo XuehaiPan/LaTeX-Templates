@@ -126,7 +126,7 @@
     \usebeamerfont{framesubtitle}
     \addtolength{\@frametitleheight}{0.5\baselineskip}
   \fi
-  \begin{textblock*}{0.5\paperwidth}[1.0,0.5](\paperwidth-0.2cm,\@headlineheight+0.5\@frametitleheight)
+  \begin{textblock*}{0.5\paperwidth}[1.0,0.5](\paperwidth-0.2cm,\@headlineheight+0.515\@frametitleheight)
     \raggedleft
     \includegraphics[height=0.4cm+0.25\@frametitleheight]{figures/logo-frametitle.eps}
   \end{textblock*}

@@ -2,7 +2,7 @@
 
 A collection of LaTeX templates in English/Chinese, with VS Code settings for LaTeX Workshop. ([screenshots](#screenshots))
 
-## Table of Contents  <!-- omit in toc -->
+### Table of Contents  <!-- omit in toc -->
 
 - [Editor Preparation](#editor-preparation)
   - [1. Preliminaries](#1-preliminaries)
@@ -63,8 +63,8 @@ cpan -i File::HomeDir Log::Log4perl Log::Dispatch::File \
 Recommended extensions:
 
 - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop): boost LaTeX typesetting efficiency with preview, compile, autocomplete, colorize, and more.
-- [Local History](https://marketplace.visualstudio.com/items?itemName=xyz.local-history) (optional): maintain local history of files.
-- [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) (optional): colorize matching brackets.
+- [Local History](https://marketplace.visualstudio.com/items?itemName=xyz.local-history) *(optional)*: maintain local history of files.
+- [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) *(optional)*: colorize matching brackets.
 
 You can find them in Visual Studio Code Marketplace (`Ctrl / Cmd + Shift + X`).
 
@@ -94,15 +94,17 @@ Some useful keyboard shortcuts (may be overridden by keymap settings):
 
 - View LaTeX PDF file (`Ctrl / Cmd + Alt + V`)
 - Build with last used recipe (`Ctrl / Cmd + Alt + B`)
-- Clean up auxiliary files (`Ctrl / Cmd + Alt + C`)
+- Clean up auxiliary files (`Ctrl / Cmd + Alt + C`) <sup>[*](#note)</sup>
 - SyncTeX from cursor in TeX file to PDF (`Ctrl / Cmd + Alt + J`)
 - SyncTeX from PDF to TeX file (hold `Ctrl / Cmd` key and click on PDF in the preview panel)
 - Format source files using latexindent (`Ctrl / Cmd + Shift + I`)
 
+  <a name="note">*</a> *You don't need to do cleanup frequently, please do it only when necessary (e.g., **on build failed**). (Keep these auxiliary files can speed up the next compilation.)*
+
 ### * Manual Compilation
 
 ```bash
-cd Assignment   # to a template folder
+cd Assignment  # navigate to a template folder first
 ```
 
 #### Compile with Latexmk (Recommended)
@@ -113,20 +115,20 @@ latexmk -xelatex -synctex=1 -shell-escape \
     -output-directory=out main
 ```
 
-- clean up auxiliary files
+- clean up auxiliary files <sup>[*](#note)</sup>
 
-```bash
-latexmk -c -output-directory=out
-```
+  ```bash
+  latexmk -c -output-directory=out
+  ```
 
 - build and do cleanup if failed
 
-```bash
-latexmk -xelatex -synctex=1 -shell-escape \
-    -interaction=nonstopmode -file-line-error \
-    -output-directory=out main ||
-    latexmk -c -output-directory=out
-```
+  ```bash
+  latexmk -xelatex -synctex=1 -shell-escape \
+      -interaction=nonstopmode -file-line-error \
+      -output-directory=out main ||
+      latexmk -c -output-directory=out
+  ```
 
 #### Compile with XeLaTeX and Biber
 
@@ -137,13 +139,10 @@ Execute `xelatex` multiple times to resolve cross-references in the document.
 xelatex -synctex=1 -shell-escape \
     -interaction=nonstopmode -file-line-error \
     -output-directory=out main
-
 biber --output-directory=out main
-
 xelatex -synctex=1 -shell-escape \
     -interaction=nonstopmode -file-line-error \
     -output-directory=out main
-
 xelatex -synctex=1 -shell-escape \
     -interaction=nonstopmode -file-line-error \
     -output-directory=out main

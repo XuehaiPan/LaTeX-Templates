@@ -110,23 +110,15 @@
   \newlength{\@headlineheight}
   \newlength{\@frametitleheight}
   \usebeamerfont{headline}
-  \setlength{\@headlineheight}{4.3ex}
-  \settoheight{\@frametitleheight}{\strutbox{\usebeamerfont{frametitle}\insertframetitle}}
+  \setlength{\@headlineheight}{4.75ex}
   \usebeamerfont{frametitle}
-  \addtolength{\@frametitleheight}{\baselineskip+0.6cm-3ex}
-  \if@Chinese
-    \addtolength{\@frametitleheight}{0.1ex}
-  \fi
+  \setlength{\@frametitleheight}{\baselineskip+0.6cm-2ex}
   \ifx\insertframesubtitle\@empty
   \else
-    \let\@framesubtitleheight\relax
-    \newlength{\@framesubtitleheight}
-    \settoheight{\@framesubtitleheight}{\strutbox{\usebeamerfont{framesubtitle}\insertframesubtitle}}
-    \addtolength{\@frametitleheight}{\@framesubtitleheight}
     \usebeamerfont{framesubtitle}
-    \addtolength{\@frametitleheight}{0.5\baselineskip}
+    \addtolength{\@frametitleheight}{\baselineskip}
   \fi
-  \begin{textblock*}{0.5\paperwidth}[1.0,0.5](\paperwidth-0.2cm,\@headlineheight+0.515\@frametitleheight)
+  \begin{textblock*}{0.5\paperwidth}[1.0,0.5](\paperwidth-0.2cm,\@headlineheight+0.55\@frametitleheight)
     \raggedleft
     \includegraphics[height=0.4cm+0.25\@frametitleheight]{figures/logo-frametitle.eps}
   \end{textblock*}

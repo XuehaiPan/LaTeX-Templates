@@ -40,8 +40,8 @@ brew install --cask mactex
 ```bash
 wget -O - http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz |
     tar -xz --strip-components=1 --one-top-level=install-tl-unx &&
-    cd install-tl-unx
-sudo ./install-tl
+    cd install-tl-unx &&
+    sudo ./install-tl
 ```
 
 #### *(Optional) Install dependencies for minted and latexindent*  <!-- omit in toc -->

@@ -44,6 +44,14 @@
         "editor.quickSuggestions": true,
         "editor.acceptSuggestionOnEnter": "off"
     },
+    "[restructuredtext]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.wordWrap": "on",
+        "editor.renderWhitespace": "all",
+        "editor.quickSuggestions": true,
+        "editor.acceptSuggestionOnEnter": "off"
+    },
 
     //* Bracket Pair Colorizer */
     "bracket-pair-colorizer-2.colorMode": "Consecutive",

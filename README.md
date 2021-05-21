@@ -169,7 +169,7 @@ xelatex -synctex=1 -shell-escape \
   </tr>
   <tr>
     <td align="center">Presentation</td>
-    <td align="center">NeurIPS 2020</td>
+    <td align="center">NeurIPS 2021</td>
   </tr>
   <tr>
     <td align="center">

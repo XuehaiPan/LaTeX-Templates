@@ -1,21 +1,21 @@
 \documentclass{article}
 
 % if you need to pass options to natbib, use, e.g.:
-%     \PassOptionsToPackage{numbers, compress}{natbib}
-% before loading neurips_2020
+%   \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2021
 
 % ready for submission
-% \usepackage{neurips_2020}
+\usepackage{neurips_2021}
 
 % to compile a preprint version, e.g., for submission to arXiv, add add the
 % [preprint] option:
-%     \usepackage[preprint]{neurips_2020}
+%   \usepackage[preprint]{neurips_2021}
 
 % to compile a camera-ready version, add the [final] option, e.g.:
-%     \usepackage[final]{neurips_2020}
+%   \usepackage[final]{neurips_2021}
 
 % to avoid loading the natbib package, add option nonatbib:
-\usepackage[nonatbib]{neurips_2020}
+%   \usepackage[nonatbib]{neurips_2021}
 
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
@@ -25,8 +25,9 @@
 \usepackage{amsfonts}       % blackboard math symbols
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
 
-\title{Formatting Instructions For NeurIPS 2020}
+\title{Formatting Instructions For NeurIPS 2021}
 
 % The \author macro works with any number of authors. There are two commands
 % used to separate the names and addresses of multiple authors: \And and \AND.
@@ -79,23 +80,19 @@
   must be limited to one paragraph.
 \end{abstract}
 
-\section{Submission of papers to NeurIPS 2020}
-
-NeurIPS requires electronic submissions.  The electronic submission site is
-\begin{center}
-  \url{https://cmt3.research.microsoft.com/NeurIPS2020/}
-\end{center}
+\section{Submission of papers to NeurIPS 2021}
 
 Please read the instructions below carefully and follow them faithfully.
 
 \subsection{Style}
 
-Papers to be submitted to NeurIPS 2020 must be prepared according to the
-instructions presented here. Papers may only be up to eight pages long,
-including figures. Additional pages \emph{containing only a section on the broader impact, acknowledgments and/or cited references} are allowed. Papers that exceed eight pages of content will not be reviewed, or in any other way considered for
-presentation at the conference.
+Papers to be submitted to NeurIPS 2021 must be prepared according to the
+instructions presented here. Papers may only be up to {\bf nine} pages long,
+including figures. Additional pages \emph{containing only acknowledgments and
+  references} are allowed. Papers that exceed the page limit will not be
+reviewed, or in any other way considered for presentation at the conference.
 
-The margins in 2020 are the same as those in 2007, which allow for $\sim$$15\%$
+The margins in 2021 are the same as those in 2007, which allow for $\sim$$15\%$
 more words in the paper compared to earlier years.
 
 Authors are required to use the NeurIPS \LaTeX{} style files obtainable at the
@@ -110,10 +107,10 @@ the World Wide Web at
 \begin{center}
   \url{http://www.neurips.cc/}
 \end{center}
-The file \verb+neurips_2020.pdf+ contains these instructions and illustrates the
+The file \verb+neurips_2021.pdf+ contains these instructions and illustrates the
 various formatting requirements your NeurIPS paper must satisfy.
 
-The only supported style file for NeurIPS 2020 is \verb+neurips_2020.sty+,
+The only supported style file for NeurIPS 2021 is \verb+neurips_2021.sty+,
 rewritten for \LaTeXe{}.  \textbf{Previous style files for \LaTeX{} 2.09,
   Microsoft Word, and RTF are no longer supported!}
 
@@ -135,7 +132,7 @@ options. This will anonymize your submission and add line numbers to aid
 review. Please do \emph{not} refer to these line numbers in your paper as they
 will be removed during generation of camera-ready copies.
 
-The file \verb+neurips_2020.tex+ may be used as a ``shell'' for writing your
+The file \verb+neurips_2021.tex+ may be used as a ``shell'' for writing your
 paper. All you have to do is replace the author, title, abstract, and text of
 the paper with your own.
 
@@ -208,7 +205,7 @@ The documentation for \verb+natbib+ may be found at
 Of note is the command \verb+\citet+, which produces citations appropriate for
 use in inline text.  For example,
 \begin{verbatim}
-   \citet{hasselmo} investigated\dots
+  \citet{hasselmo} investigated\dots
 \end{verbatim}
 produces
 \begin{quote}
@@ -216,15 +213,15 @@ produces
 \end{quote}
 
 If you wish to load the \verb+natbib+ package with options, you may add the
-following before loading the \verb+neurips_2020+ package:
+following before loading the \verb+neurips_2021+ package:
 \begin{verbatim}
-   \PassOptionsToPackage{options}{natbib}
+  \PassOptionsToPackage{options}{natbib}
 \end{verbatim}
 
 If \verb+natbib+ clashes with another package you load, you can add the optional
 argument \verb+nonatbib+ when loading the style file:
 \begin{verbatim}
-   \usepackage[nonatbib]{neurips_2020}
+  \usepackage[nonatbib]{neurips_2021}
 \end{verbatim}
 
 As submission is double blind, refer to your own published work in the third
@@ -332,15 +329,15 @@ achieve this.
   \item The \verb+\bbold+ package almost always uses bitmap fonts.  You should use
         the equivalent AMS Fonts:
         \begin{verbatim}
-   \usepackage{amsfonts}
+  \usepackage{amsfonts}
 \end{verbatim}
         followed by, e.g., \verb+\mathbb{R}+, \verb+\mathbb{N}+, or \verb+\mathbb{C}+
         for $\mathbb{R}$, $\mathbb{N}$ or $\mathbb{C}$.  You can also use the following
         workaround for reals, natural and complex:
         \begin{verbatim}
-   \newcommand{\RR}{I\!\!R} %real numbers
-   \newcommand{\Nat}{I\!\!N} %natural numbers
-   \newcommand{\CC}{I\!\!\!\!C} %complex numbers
+  \newcommand{\RR}{I\!\!R} %real numbers
+  \newcommand{\Nat}{I\!\!N} %natural numbers
+  \newcommand{\CC}{I\!\!\!\!C} %complex numbers
 \end{verbatim}
         Note that \verb+amsfonts+ is automatically loaded by the \verb+amssymb+ package.
 
@@ -356,8 +353,8 @@ Most of the margin problems come from figures positioned by hand using
 \verb+\includegraphics+ from the \verb+graphicx+ package. Always specify the
 figure width as a multiple of the line width as in the example below:
 \begin{verbatim}
-   \usepackage[pdftex]{graphicx} ...
-   \includegraphics[width=0.8\linewidth]{myfile.pdf}
+  \usepackage[pdftex]{graphicx} ...
+  \includegraphics[width=0.8\linewidth]{myfile.pdf}
 \end{verbatim}
 See Section 4.4 in the graphics bundle documentation
 (\url{http://mirrors.ctan.org/macros/latex/required/graphics/grfguide.pdf})
@@ -366,22 +363,11 @@ A number of width problems arise when \LaTeX{} cannot properly hyphenate a
 line. Please give LaTeX hyphenation hints using the \verb+\-+ command when
 necessary.
 
-
-\section*{Broader Impact}
-
-Authors are required to include a statement of the broader impact of their work, including its ethical aspects and future societal consequences.
-Authors should discuss both positive and negative outcomes, if any. For instance, authors should discuss a)
-who may benefit from this research, b) who may be put at disadvantage from this research, c) what are the consequences of failure of the system, and d) whether the task/method leverages
-biases in the data. If authors believe this is not applicable to them, authors can simply state this.
-
-Use unnumbered first level headings for this section, which should go at the end of the paper. {\bf Note that this section does not count towards the eight pages of content that are allowed.}
-
 \begin{ack}
   Use unnumbered first level headings for the acknowledgments. All acknowledgments
   go at the end of the paper before the list of references. Moreover, you are required to declare
   funding (financial activities supporting the submitted work) and competing interests (related financial activities outside the submitted work).
-  More information about this disclosure can be found at: \url{https://neurips.cc/Conferences/2020/PaperInformation/FundingDisclosure}.
-
+  More information about this disclosure can be found at: \url{https://neurips.cc/Conferences/2021/PaperInformation/FundingDisclosure}.
 
   Do {\bf not} include this section in the anonymized submission, only in the final paper. You can use the \texttt{ack} environment provided in the style file to autmoatically hide this section in the anonymized submission.
 \end{ack}
@@ -392,9 +378,10 @@ References follow the acknowledgments. Use unnumbered first-level heading for
 the references. Any choice of citation style is acceptable as long as you are
 consistent. It is permissible to reduce the font size to \verb+small+ (9 point)
 when listing the references.
-  {\bf Note that the Reference section does not count towards the eight pages of content that are allowed.}
+Note that the Reference section does not count towards the page limit.
 \medskip
 
+{
 \small
 
 [1] Alexander, J.A.\ \& Mozer, M.C.\ (1995) Template-based algorithms for
@@ -402,12 +389,103 @@ connectionist rule extraction. In G.\ Tesauro, D.S.\ Touretzky and T.K.\ Leen
 (eds.), {\it Advances in Neural Information Processing Systems 7},
 pp.\ 609--616. Cambridge, MA: MIT Press.
 
-  [2] Bower, J.M.\ \& Beeman, D.\ (1995) {\it The Book of GENESIS: Exploring
-    Realistic Neural Models with the GEneral NEural SImulation System.}  New York:
+[2] Bower, J.M.\ \& Beeman, D.\ (1995) {\it The Book of GENESIS: Exploring
+Realistic Neural Models with the GEneral NEural SImulation System.}  New York:
 TELOS/Springer--Verlag.
 
 [3] Hasselmo, M.E., Schnell, E.\ \& Barkai, E.\ (1995) Dynamics of learning and
 recall at excitatory recurrent synapses and cholinergic modulation in rat
 hippocampal region CA3. {\it Journal of Neuroscience} {\bf 15}(7):5249-5262.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Checklist}
+
+%%% BEGIN INSTRUCTIONS %%%
+The checklist follows the references.  Please
+read the checklist guidelines carefully for information on how to answer these
+questions.  For each question, change the default \answerTODO{} to \answerYes{},
+\answerNo{}, or \answerNA{}.  You are strongly encouraged to include a {\bf
+  justification to your answer}, either by referencing the appropriate section of
+your paper or providing a brief inline description.  For example:
+\begin{itemize}
+  \item Did you include the license to the code and datasets? \answerYes{See Section~\ref{gen_inst}.}
+  \item Did you include the license to the code and datasets? \answerNo{The code and the data are proprietary.}
+  \item Did you include the license to the code and datasets? \answerNA{}
+\end{itemize}
+Please do not modify the questions and only use the provided macros for your
+answers.  Note that the Checklist section does not count towards the page
+limit.  In your paper, please delete this instructions block and only keep the
+Checklist section heading above along with the questions/answers below.
+%%% END INSTRUCTIONS %%%
+
+\begin{enumerate}
+
+  \item For all authors...
+        \begin{enumerate}
+          \item Do the main claims made in the abstract and introduction accurately reflect the paper's contributions and scope?
+                \answerTODO{}
+          \item Did you describe the limitations of your work?
+                \answerTODO{}
+          \item Did you discuss any potential negative societal impacts of your work?
+                \answerTODO{}
+          \item Have you read the ethics review guidelines and ensured that your paper conforms to them?
+                \answerTODO{}
+        \end{enumerate}
+
+  \item If you are including theoretical results...
+        \begin{enumerate}
+          \item Did you state the full set of assumptions of all theoretical results?
+                \answerTODO{}
+          \item Did you include complete proofs of all theoretical results?
+                \answerTODO{}
+        \end{enumerate}
+
+  \item If you ran experiments...
+        \begin{enumerate}
+          \item Did you include the code, data, and instructions needed to reproduce the main experimental results (either in the supplemental material or as a URL)?
+                \answerTODO{}
+          \item Did you specify all the training details (e.g., data splits, hyperparameters, how they were chosen)?
+                \answerTODO{}
+          \item Did you report error bars (e.g., with respect to the random seed after running experiments multiple times)?
+                \answerTODO{}
+          \item Did you include the total amount of compute and the type of resources used (e.g., type of GPUs, internal cluster, or cloud provider)?
+                \answerTODO{}
+        \end{enumerate}
+
+  \item If you are using existing assets (e.g., code, data, models) or curating/releasing new assets...
+        \begin{enumerate}
+          \item If your work uses existing assets, did you cite the creators?
+                \answerTODO{}
+          \item Did you mention the license of the assets?
+                \answerTODO{}
+          \item Did you include any new assets either in the supplemental material or as a URL?
+                \answerTODO{}
+          \item Did you discuss whether and how consent was obtained from people whose data you're using/curating?
+                \answerTODO{}
+          \item Did you discuss whether the data you are using/curating contains personally identifiable information or offensive content?
+                \answerTODO{}
+        \end{enumerate}
+
+  \item If you used crowdsourcing or conducted research with human subjects...
+        \begin{enumerate}
+          \item Did you include the full text of instructions given to participants and screenshots, if applicable?
+                \answerTODO{}
+          \item Did you describe any potential participant risks, with links to Institutional Review Board (IRB) approvals, if applicable?
+                \answerTODO{}
+          \item Did you include the estimated hourly wage paid to participants and the total amount spent on participant compensation?
+                \answerTODO{}
+        \end{enumerate}
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+\section{Appendix}
+
+Optionally include extra information (complete proofs, additional experiments and plots) in the appendix.
+This section will often be part of the supplemental material.
 
 \end{document}

@@ -184,8 +184,8 @@
 \RequirePackage{float} % Better floating style for figures & tables
 \RequirePackage[justification=centering]{caption} % To modify the captions
 \RequirePackage{subcaption} % Allows subcaptions
-\RequirePackage{tikz} % Required for creating graphics
-\usetikzlibrary{positioning,shapes.geometric}
+\usepackage{pgfplots,tikz,tikzscale} % Required for creating graphics
+\usetikzlibrary{positioning,shapes.geometric,decorations,calligraphy}
 
 \RequirePackage{algorithm} % Required for insertion of code
 \RequirePackage{algpseudocode}
@@ -221,10 +221,13 @@
 }
 \setmintedinline{fontsize={\smaller}}
 
+\RequirePackage{hyperref,url} % Required for hyperlinks
+
 \RequirePackage{amsmath,amssymb,amsfonts} % Required for math
 \RequirePackage{mathtools}
 \RequirePackage{mathrsfs}
 \RequirePackage{physics}
+\RequirePackage{nicefrac}
 \RequirePackage{relsize}
 \RequirePackage{extarrows}
 

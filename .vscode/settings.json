@@ -39,6 +39,7 @@
     "[markdown]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 2,
+        "editor.detectIndentation": false,
         "editor.wordWrap": "on",
         "editor.renderWhitespace": "all",
         "editor.quickSuggestions": true,

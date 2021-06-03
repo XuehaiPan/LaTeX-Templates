@@ -63,6 +63,7 @@ cpan -i File::HomeDir Log::Log4perl Log::Dispatch::File \
 Recommended extensions:
 
 - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop): boost LaTeX typesetting efficiency with preview, compile, autocomplete, colorize, and more.
+- [LaTeX Utilities](https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities): An add-on to LaTeX Workshop that provides some fancy features.
 - [Local History](https://marketplace.visualstudio.com/items?itemName=xyz.local-history) *(optional)*: maintain local history of files.
 - [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) *(optional)*: colorize matching brackets.
 

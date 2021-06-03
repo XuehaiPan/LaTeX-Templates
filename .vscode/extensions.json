@@ -2,6 +2,7 @@
     "recommendations": [
         "coenraads.bracket-pair-colorizer-2",
         "james-yu.latex-workshop",
+        "tecosaur.latex-utilities",
         "xyz.local-history"
     ]
 }

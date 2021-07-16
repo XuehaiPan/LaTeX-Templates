@@ -1,6 +1,6 @@
 # LaTeX Templates
 
-A collection of LaTeX templates in English/Chinese, with VS Code settings for LaTeX Workshop. ([screenshots](#screenshots))
+A collection of LaTeX templates in English / Chinese, with VS Code settings for LaTeX Workshop. ([screenshots](#screenshots))
 
 ### Table of Contents  <!-- omit in toc -->
 
@@ -52,7 +52,7 @@ pip3 install Pygments  # for Windows / macOS / Linux
 brew install pygments  # for macOS
 
 # Install dependencies for latexindent
-cpan -i File::HomeDir Log::Log4perl Log::Dispatch::File \
+cpan -i -T File::HomeDir Log::Log4perl Log::Dispatch::File \
         YAML::Tiny Unicode::GCString
 ```
 
@@ -64,10 +64,10 @@ Recommended extensions:
 
 - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop): boost LaTeX typesetting efficiency with preview, compile, autocomplete, colorize, and more.
 - [LaTeX Utilities](https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities): An add-on to LaTeX Workshop that provides some fancy features.
-- [Local History](https://marketplace.visualstudio.com/items?itemName=xyz.local-history) *(optional)*: maintain local history of files.
-- [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) *(optional)*: colorize matching brackets.
+- [Local History](https://marketplace.visualstudio.com/items?itemName=xyz.local-history) (optional): maintain local history of files.
+- [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2) (optional): colorize matching brackets.
 
-You can find them in Visual Studio Code Marketplace (`Ctrl / Cmd + Shift + X`).
+You can find them in Visual Studio Code Marketplace (shortcut: <kbd>Ctrl / Cmd + Shift + X</kbd>).
 
 ### 3. Setup Editor for LaTeX Projects
 
@@ -89,16 +89,16 @@ Then install recommended extensions in [`".vscode/extensions.json"`](.vscode/ext
 code --new-window Assignment   # open a template folder using VS Code
 ```
 
-Open the `main.tex` file in a VS Code tab, then compile it with LaTeX-Workshop extension tool in the left panel, or use keyboard shortcut: `Ctrl / Cmd + Alt + B`. See the [wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki) page of LaTeX-Workshop for more details about the extension features.
+Open the `main.tex` file in a VS Code tab, then compile it with LaTeX-Workshop extension tool in the left panel, or use keyboard shortcut: <kbd>Ctrl / Cmd + Alt + B</kbd>. See the [wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki) page of LaTeX-Workshop for more details about the extension features.
 
 Some useful keyboard shortcuts (may be overridden by keymap settings):
 
-- View LaTeX PDF file (`Ctrl / Cmd + Alt + V`)
-- Build with last used recipe (`Ctrl / Cmd + Alt + B`)
-- Clean up auxiliary files (`Ctrl / Cmd + Alt + C`) <sup>[*](#note)</sup>
-- SyncTeX from cursor in TeX file to PDF (`Ctrl / Cmd + Alt + J`)
-- SyncTeX from PDF to TeX file (hold `Ctrl / Cmd` key and click on PDF in the preview panel)
-- Format source files using latexindent (`Ctrl / Cmd + Shift + I`)
+- View LaTeX PDF file (<kbd>Ctrl / Cmd + Alt + V</kbd>)
+- Build with last used recipe (<kbd>Ctrl / Cmd + Alt + B</kbd>)
+- Clean up auxiliary files<sup>[*](#note)</sup> (<kbd>Ctrl / Cmd + Alt + C</kbd>)
+- SyncTeX from cursor in TeX file to PDF (<kbd>Ctrl / Cmd + Alt + J</kbd>)
+- SyncTeX from PDF to TeX file (hold <kbd>Ctrl / Cmd` key and click</kbd>on PDF in the preview panel)
+- Format source files using latexindent (<kbd>Ctrl / Cmd + Shift + I</kbd>)
 
   <a name="note">*</a> *You don't need to do cleanup frequently, please do it only when necessary (e.g., **on build failed**). (Keep these auxiliary files can speed up the next compilation.)*
 
@@ -116,7 +116,7 @@ latexmk -xelatex -synctex=1 -shell-escape \
     -output-directory=out main
 ```
 
-- clean up auxiliary files <sup>[*](#note)</sup>
+- clean up auxiliary files<sup>[*](#note)</sup>
 
   ```bash
   latexmk -c -output-directory=out

@@ -20,7 +20,7 @@
         "**/.settings": true,
         "**/.idea": true,
         "**/.history": true,
-        "**/*.pyc": true,
+        "**/*.py[cod]": true,
         "**/__pycache__": true
     },
 

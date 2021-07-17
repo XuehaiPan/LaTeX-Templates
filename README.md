@@ -44,7 +44,7 @@ wget -O - http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz |
     sudo ./install-tl
 ```
 
-#### *(Optional) Install dependencies for minted and latexindent*  <!-- omit in toc -->
+#### (Optional) Install dependencies for `minted` and `latexindent`  <!-- omit in toc -->
 
 ```bash
 # Install Pygments for code highlighting with minted in LaTeX
@@ -89,7 +89,7 @@ Then install recommended extensions in [`".vscode/extensions.json"`](.vscode/ext
 code --new-window Assignment   # open a template folder using VS Code
 ```
 
-Open the `main.tex` file in a VS Code tab, then compile it with LaTeX-Workshop extension tool in the left panel, or use keyboard shortcut: <kbd>Ctrl / Cmd + Alt + B</kbd>. See the [wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki) page of LaTeX-Workshop for more details about the extension features.
+Open the `main.tex` file in a VS Code tab, then compile it with LaTeX-Workshop extension tool in the left panel, or use keyboard shortcut <kbd>Ctrl / Cmd + Alt + B</kbd>. See the [wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki) page of LaTeX-Workshop for more details about the extension features.
 
 Some useful keyboard shortcuts (may be overridden by keymap settings):
 
@@ -97,8 +97,8 @@ Some useful keyboard shortcuts (may be overridden by keymap settings):
 - Build with last used recipe (<kbd>Ctrl / Cmd + Alt + B</kbd>)
 - Clean up auxiliary files<sup>[*](#note)</sup> (<kbd>Ctrl / Cmd + Alt + C</kbd>)
 - SyncTeX from cursor in TeX file to PDF (<kbd>Ctrl / Cmd + Alt + J</kbd>)
-- SyncTeX from PDF to TeX file (hold <kbd>Ctrl / Cmd` key and click</kbd>on PDF in the preview panel)
-- Format source files using latexindent (<kbd>Ctrl / Cmd + Shift + I</kbd>)
+- SyncTeX from PDF to TeX file (hold the <kbd>Ctrl / Cmd</kbd> key and click on the PDF in the preview panel)
+- Format source files using `latexindent` (<kbd>Ctrl / Cmd + Shift + I</kbd>)
 
   <a name="note">*</a> *You don't need to do cleanup frequently, please do it only when necessary (e.g., **on build failed**). (Keep these auxiliary files can speed up the next compilation.)*
 

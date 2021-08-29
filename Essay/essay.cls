@@ -68,7 +68,7 @@
 
 \RequirePackage{wrapfig} % Allows in-line images
 \RequirePackage{float} % Better floating style for figures & tables
-\RequirePackage[justification=centering]{caption} % To modify the captions
+\RequirePackage[justification=justified]{caption} % To modify the captions
 \RequirePackage{subcaption} % Allows subcaptions
 
 \RequirePackage{enumitem} % Required for list customisation

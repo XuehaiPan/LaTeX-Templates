@@ -181,7 +181,7 @@
 
 \RequirePackage{wrapfig} % Allows in-line images
 \RequirePackage{float} % Better floating style for figures & tables
-\RequirePackage[justification=centering]{caption} % To modify the captions
+\RequirePackage[justification=justified]{caption} % To modify the captions
 \RequirePackage{subcaption} % Allows subcaptions
 \usepackage{pgfplots,tikz,tikzscale} % Required for creating graphics
 \usetikzlibrary{positioning,shapes.geometric,decorations,calligraphy}

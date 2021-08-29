@@ -208,7 +208,7 @@
   breaklines=true,
   breakatwhitespace=true
 }
-\usemintedstyle{colorful}
+\usemintedstyle{default}
 \setminted{
   bgcolor={black!5},
   linenos=true,

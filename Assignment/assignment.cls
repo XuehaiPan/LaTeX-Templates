@@ -190,8 +190,8 @@
 \RequirePackage{algpseudocode}
 \RequirePackage[final]{listings}
 \RequirePackage[final=true,outputdir=out]{minted}
-\renewcommand{\algorithmicrequire}{\textbf{Input:}}
-\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\algrenewcommand{\algorithmicrequire}{\textbf{Input:}}
+\algrenewcommand{\algorithmicensure}{\textbf{Output:}}
 \if@Chinese
   \renewcommand{\listingscaption}{源代码}
   \renewcommand{\lstlistingname}{源代码}

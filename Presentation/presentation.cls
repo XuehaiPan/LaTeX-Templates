@@ -176,11 +176,11 @@
 \newcolumntype{B}[1]{>{\centering\arraybackslash}b{#1}}
 
 \RequirePackage{graphicx} % Required for including images
-\RequirePackage{animate} % Required for including animated graphics
-\RequirePackage{wrapfig} % Allows in-line images
 \graphicspath{{figures/}{./}} % Specifies where to look for included images (trailing slash required)
 
 \RequirePackage[absolute,overlay]{textpos} % Required for creating text blocks
+\RequirePackage{animate} % Required for including animated graphics
+\RequirePackage{wrapfig} % Allows in-line images
 \RequirePackage{float} % Better floating style for figures & tables
 \RequirePackage[justification=justified]{caption} % To modify the captions
 \RequirePackage{subcaption} % Allows subcaptions
@@ -191,8 +191,8 @@
 \RequirePackage{algpseudocode}
 \RequirePackage[final]{listings}
 \RequirePackage[final=true,outputdir=out]{minted}
-\renewcommand{\algorithmicrequire}{\textbf{Input:}}
-\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\algrenewcommand{\algorithmicrequire}{\textbf{Input:}}
+\algrenewcommand{\algorithmicensure}{\textbf{Output:}}
 \if@Chinese
   \renewcommand{\listingscaption}{源代码}
   \renewcommand{\lstlistingname}{源代码}

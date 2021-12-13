@@ -215,7 +215,7 @@
   labelposition=all,
   linenos=true,
   numbers=left,
-  autogobble=true,
+  % autogobble=true, % bugs for minted not fixed yet
   python3=true,
   showspaces=false,
   tabsize=4,

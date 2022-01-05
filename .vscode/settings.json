@@ -55,6 +55,7 @@
     },
 
     //* Bracket Pair Colorizer */
+    "bracket-pair-colorizer-2.depreciation-notice": false,
     "bracket-pair-colorizer-2.colorMode": "Consecutive",
     "bracket-pair-colorizer-2.colors": [
         "Gold",
@@ -354,8 +355,7 @@
         "*.fdb_latexmk",
         "*.synctex(busy)",
         "*.synctex.gz(busy)",
-        "_minted-*/*",
-        "_minted-*/"
+        "_minted-*/**"
     ],
 
     //* LaTeX Utilities */

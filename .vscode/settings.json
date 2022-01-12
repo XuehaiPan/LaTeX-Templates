@@ -1,4 +1,21 @@
 {
+    //* Bracket Pair Colorization */
+    "editor.guides.bracketPairs": true,
+    "editor.guides.bracketPairsHorizontal": true,
+    "editor.guides.highlightActiveBracketPair": true,
+    "editor.guides.indentation": true,
+    "editor.guides.highlightActiveIndentation": true,
+    "editor.bracketPairColorization.enabled": true,
+    "workbench.colorCustomizations": {
+        "editorBracketHighlight.foreground1": "#ffd700",
+        "editorBracketHighlight.foreground2": "#ff1491",
+        "editorBracketHighlight.foreground3": "#00bfff",
+        "editorBracketHighlight.foreground4": "#ff8c00",
+        "editorBracketHighlight.foreground5": "#32cd32",
+        "editorBracketHighlight.foreground6": "#ee82ee",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#ffffff"
+    },
+
     //* Files */
     "files.autoGuessEncoding": false,
     "files.encoding": "utf8",
@@ -53,27 +70,6 @@
         "editor.quickSuggestions": true,
         "editor.acceptSuggestionOnEnter": "off"
     },
-
-    //* Bracket Pair Colorizer */
-    "bracket-pair-colorizer-2.depreciation-notice": false,
-    "bracket-pair-colorizer-2.colorMode": "Consecutive",
-    "bracket-pair-colorizer-2.colors": [
-        "Gold",
-        "DeepPink",
-        "Cyan",
-        "DarkOrange",
-        "LimeGreen",
-        "Magenta",
-        "DeepSkyBlue",
-        "HotPink",
-        "LightSeaGreen",
-        "Orchid"
-    ],
-    "bracket-pair-colorizer-2.showBracketsInGutter": true,
-    "bracket-pair-colorizer-2.showBracketsInRuler": true,
-    "bracket-pair-colorizer-2.showHorizontalScopeLine": true,
-    "bracket-pair-colorizer-2.showVerticalScopeLine": true,
-    "bracket-pair-colorizer-2.highlightActiveScope": true,
 
     //* LaTeX Workshop */
     "latex-workshop.intellisense.package.enabled": true,

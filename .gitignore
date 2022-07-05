@@ -1,4 +1,7 @@
 ##### TeX.gitignore #####
+## TeX Live installers
+install-tl-*
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

@@ -10,7 +10,7 @@ A collection of LaTeX templates in English / Chinese, with VS Code settings for 
   - [3. Setup Editor for LaTeX Projects](#3-setup-editor-for-latex-projects)
 - [Usage](#usage)
   - [4. Compile and Preview with LaTeX Workshop](#4-compile-and-preview-with-latex-workshop)
-  - [* Manual Compilation](#-manual-compilation)
+  - [\* Manual Compilation](#-manual-compilation)
     - [Compile with Latexmk (Recommended)](#compile-with-latexmk-recommended)
     - [Compile with XeLaTeX and Biber](#compile-with-xelatex-and-biber)
 - [Screenshots](#screenshots)
@@ -78,7 +78,7 @@ git clone --depth=1 https://github.com/XuehaiPan/LaTeX-Templates.git
 code LaTeX-Templates
 ```
 
-Then install recommended extensions in [`".vscode/extensions.json"`](.vscode/extensions.json), and copy the settings in [`".vscode/settings.json"`](.vscode/settings.json) to your user settings. Refer to [XuehaiPan/Dev-Setup/my-vscode-settings](https://github.com/XuehaiPan/Dev-Setup/blob/master/my-vscode-settings/settings.json) as a reference.
+Then install recommended extensions in [`".vscode/extensions.json"`](.vscode/extensions.json), and copy the settings in [`".vscode/settings.json"`](.vscode/settings.json) to your user settings. Refer to [XuehaiPan/Dev-Setup/my-vscode-settings](https://github.com/XuehaiPan/Dev-Setup/blob/HEAD/my-vscode-settings/settings.json) as a reference.
 
 ## Usage
 

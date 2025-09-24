@@ -189,7 +189,7 @@
 \RequirePackage{algorithm} % Required for insertion of code
 \RequirePackage{algpseudocode}
 \RequirePackage[final]{listings}
-\RequirePackage[final=true,outputdir=out]{minted}
+\RequirePackage{minted}
 \algrenewcommand{\algorithmicrequire}{\textbf{Input:}}
 \algrenewcommand{\algorithmicensure}{\textbf{Output:}}
 \if@Chinese

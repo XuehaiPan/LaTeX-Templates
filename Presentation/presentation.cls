@@ -98,7 +98,7 @@
 
 \usecolortheme{beaver}
 \mode<presentation>
-  \definecolor{cbeaver}{RGB}{153,0,0} % Make the red color lighter than PKU Red (R139G0B18 / C0M100Y100K45)
+  \definecolor{cbeaver}{RGB}{91,105,247} % DeepSeek Blue
   \setbeamercolor{section in toc}{fg=black,bg=white}
   \setbeamercolor{alerted text}{fg=cbeaver!80!gray}
   \setbeamercolor*{palette primary}{fg=cbeaver!60!black,bg=gray!30!white}

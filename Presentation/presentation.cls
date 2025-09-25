@@ -97,7 +97,25 @@
 }
 
 \usecolortheme{beaver}
-\definecolor{darkred}{rgb}{0.7,0.0,0.0} % Make the red color darker and appear more like the PKU red (C0M100Y100K45)
+\mode<presentation>
+  \definecolor{cbeaver}{rgb}{0.7,0.0,0.0} % Make the red color darker and appear more like the PKU red (C0M100Y100K45)
+  \setbeamercolor{section in toc}{fg=black,bg=white}
+  \setbeamercolor{alerted text}{fg=cbeaver!80!gray}
+  \setbeamercolor*{palette primary}{fg=cbeaver!60!black,bg=gray!30!white}
+  \setbeamercolor*{palette secondary}{fg=cbeaver!70!black,bg=gray!15!white}
+  \setbeamercolor*{palette tertiary}{bg=cbeaver!80!black,fg=gray!10!white}
+  \setbeamercolor*{palette quaternary}{fg=cbeaver,bg=gray!5!white}
+  \setbeamercolor*{sidebar}{fg=cbeaver,bg=gray!15!white}
+  \setbeamercolor*{palette sidebar primary}{fg=cbeaver!10!black}
+  \setbeamercolor*{palette sidebar secondary}{fg=white}
+  \setbeamercolor*{palette sidebar tertiary}{fg=cbeaver!50!black}
+  \setbeamercolor*{palette sidebar quaternary}{fg=gray!10!white}
+  \setbeamercolor{titlelike}{parent=palette primary,fg=cbeaver}
+  \setbeamercolor{frametitle}{bg=gray!10!white}
+  \setbeamercolor{frametitle right}{bg=gray!60!white}
+  \setbeamercolor*{separation line}{}
+  \setbeamercolor*{fine separation line}{}
+\mode<all>
 
 % If you have a file called "university-logo-filename.xxx", where xxx
 % is a graphic format that can be processed by latex or pdflatex,

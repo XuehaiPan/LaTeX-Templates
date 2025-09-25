@@ -3,7 +3,7 @@
     "editor.guides.bracketPairs": true,
     "editor.guides.bracketPairsHorizontal": true,
     "editor.guides.highlightActiveBracketPair": true,
-    "editor.guides.indentation": true,
+    "editor.guides.indentation": false,
     "editor.guides.highlightActiveIndentation": true,
     "editor.bracketPairColorization.enabled": true,
     "workbench.colorCustomizations": {
@@ -13,7 +13,7 @@
         "editorBracketHighlight.foreground4": "#ff8c00",
         "editorBracketHighlight.foreground5": "#32cd32",
         "editorBracketHighlight.foreground6": "#ee82ee",
-        "editorBracketHighlight.unexpectedBracket.foreground": "#ffffff"
+        "editorBracketHighlight.unexpectedBracket.foreground": "#ffffff",
     },
 
     //* Files */
@@ -31,41 +31,61 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
+        "**/Thumbs.db": true,
         "**/.classpath": true,
         "**/.factorypath": true,
         "**/.project": true,
         "**/.settings": true,
         "**/.idea": true,
         "**/.history": true,
-        "**/*.py[cod]": true,
-        "**/__pycache__": true
+        "**/*.py[co]": true,
+        "**/__pycache__": true,
+        "**/*_cache/": true,
     },
 
     //! Default Configuration Overrides */
-    "[latex]": {
+    "[latex][markdown][restructuredtext]": {
         "editor.insertSpaces": true,
-        "editor.tabSize": 2,
         "editor.detectIndentation": false,
+    },
+    "[latex]": {
+        "editor.tabSize": 2,
         "editor.autoIndent": "full",
         "editor.useTabStops": true,
         "editor.formatOnSave": false,
         "editor.formatOnType": false,
         "editor.suggestSelection": "recentlyUsedByPrefix",
-        "editor.wordWrap": "bounded"
+        "editor.wordWrap": "bounded",
+    },
+    "[markdown][restructuredtext]": {
+        "editor.renderWhitespace": "all",
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on",
+        },
+        "editor.acceptSuggestionOnEnter": "off",
+        "editor.wordWrap": "on",
     },
     "[markdown]": {
-        "editor.insertSpaces": true,
         "editor.tabSize": 2,
-        "editor.detectIndentation": false,
-        "editor.wordWrap": "on",
-        "editor.renderWhitespace": "all"
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
     },
     "[restructuredtext]": {
-        "editor.insertSpaces": true,
         "editor.tabSize": 4,
-        "editor.wordWrap": "on",
-        "editor.renderWhitespace": "all"
     },
+
+    //* Indent Rainbow */
+    "indentRainbow.indicatorStyle": "light",
+    "indentRainbow.colors": [
+        "rgba(255,255,64,0.15)",
+        "rgba(127,255,127,0.15)",
+        "rgba(255,127,255,0.15)",
+        "rgba(79,236,236,0.15)",
+    ],
+    "indentRainbow.errorColor": "rgba(128,32,32,0.2)",
+    "indentRainbow.lightIndicatorStyleLineWidth": 2,
+    "indentRainbow.updateDelay": 25,
 
     //* LaTeX Workshop */
     "latex-workshop.intellisense.package.enabled": true,
@@ -85,13 +105,13 @@
     "latex-workshop.view.pdf.external.viewer.command": "okular",
     "latex-workshop.view.pdf.external.viewer.args": [
         "--unique",
-        "%PDF%"
+        "%PDF%",
     ],
     "latex-workshop.view.pdf.external.synctex.command": "okular",
     "latex-workshop.view.pdf.external.synctex.args": [
         "--noraise",
         "--unique",
-        "%PDF%#src:%LINE%%TEX%"
+        "%PDF%#src:%LINE%%TEX%",
     ],
     "latex-workshop.latex.outDir": "%DIR%/out",
     "latex-workshop.latex.magic.args": [
@@ -100,11 +120,11 @@
         "-interaction=nonstopmode",
         "-file-line-error",
         "-output-directory=%OUTDIR%",
-        "%DOC%"
+        "%DOC%",
     ],
     "latex-workshop.latex.magic.bib.args": [
         "--output-directory=%OUTDIR%",
-        "%DOCFILE%"
+        "%DOCFILE%",
     ],
     "latex-workshop.latex.tools": [
         {
@@ -117,9 +137,9 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-output-directory=%OUTDIR%",
-                "%DOC%"
+                "%DOC%",
             ],
-            "env": {}
+            "env": {},
         },
         {
             "name": "xelatexmk",
@@ -131,9 +151,9 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-output-directory=%OUTDIR%",
-                "%DOC%"
+                "%DOC%",
             ],
-            "env": {}
+            "env": {},
         },
         {
             "name": "lualatexmk",
@@ -145,9 +165,9 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-output-directory=%OUTDIR%",
-                "%DOC%"
+                "%DOC%",
             ],
-            "env": {}
+            "env": {},
         },
         {
             "name": "pdflatex",
@@ -158,9 +178,9 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-output-directory=%OUTDIR%",
-                "%DOC%"
+                "%DOC%",
             ],
-            "env": {}
+            "env": {},
         },
         {
             "name": "xelatex",
@@ -171,9 +191,9 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-output-directory=%OUTDIR%",
-                "%DOC%"
+                "%DOC%",
             ],
-            "env": {}
+            "env": {},
         },
         {
             "name": "lualatex",
@@ -184,78 +204,78 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-output-directory=%OUTDIR%",
-                "%DOC%"
+                "%DOC%",
             ],
-            "env": {}
+            "env": {},
         },
         {
             "name": "biber",
             "command": "biber",
             "args": [
                 "--output-directory=%OUTDIR%",
-                "%DOCFILE%"
+                "%DOCFILE%",
             ],
-            "env": {}
+            "env": {},
         },
         {
             "name": "bibtex",
             "command": "bibtex",
             "args": [
-                "out/%DOCFILE%"
+                "out/%DOCFILE%",
             ],
             "env": {
-                "BIBINPUTS": "%OUTDIR%:"
-            }
-        }
+                "BIBINPUTS": "%OUTDIR%:",
+            },
+        },
     ],
     "latex-workshop.latex.recipes": [
         {
             "name": "Latexmk (XeLaTeX)",
             "tools": [
-                "xelatexmk"
-            ]
+                "xelatexmk",
+            ],
         },
         {
             "name": "Latexmk (LuaLaTeX)",
             "tools": [
-                "lualatexmk"
-            ]
+                "lualatexmk",
+            ],
         },
         {
             "name": "Latexmk (PDFLaTeX)",
             "tools": [
-                "pdflatexmk"
-            ]
+                "pdflatexmk",
+            ],
         },
         {
             "name": "XeLaTeX",
             "tools": [
-                "xelatex"
-            ]
+                "xelatex",
+            ],
         },
         {
             "name": "LuaLaTeX",
             "tools": [
-                "lualatex"
-            ]
+                "lualatex",
+            ],
         },
         {
             "name": "PDFLaTeX",
             "tools": [
-                "pdflatex"
-            ]
+                "pdflatex",
+            ],
         },
         {
             "name": "Biber",
             "tools": [
-                "biber"
-            ]
+                "biber",
+            ],
         },
         {
             "name": "BibTeX",
             "tools": [
-                "bibtex"
-            ]
+                "bibtex",
+            ],
         },
         {
             "name": "XeLaTeX ➞ Biber ➞ XeLaTeX × 2",
@@ -263,8 +283,8 @@
                 "xelatex",
                 "biber",
                 "xelatex",
-                "xelatex"
-            ]
+                "xelatex",
+            ],
         },
         {
             "name": "LuaLaTeX ➞ Biber ➞ LuaLaTeX × 2",
@@ -272,8 +292,8 @@
                 "lualatex",
                 "biber",
                 "lualatex",
-                "lualatex"
-            ]
+                "lualatex",
+            ],
         },
         {
             "name": "PDFLaTeX ➞ Biber ➞ PDFLaTeX × 2",
@@ -281,8 +301,8 @@
                 "pdflatex",
                 "biber",
                 "pdflatex",
-                "pdflatex"
-            ]
+                "pdflatex",
+            ],
         },
         {
             "name": "XeLaTeX ➞ BibTeX ➞ XeLaTeX × 2",
@@ -290,8 +310,8 @@
                 "xelatex",
                 "bibtex",
                 "xelatex",
-                "xelatex"
-            ]
+                "xelatex",
+            ],
         },
         {
             "name": "LuaLaTeX ➞ BibTeX ➞ LuaLaTeX × 2",
@@ -299,8 +319,8 @@
                 "lualatex",
                 "bibtex",
                 "lualatex",
-                "lualatex"
-            ]
+                "lualatex",
+            ],
         },
         {
             "name": "PDFLaTeX ➞ BibTeX ➞ PDFLaTeX × 2",
@@ -308,16 +328,17 @@
                 "pdflatex",
                 "bibtex",
                 "pdflatex",
-                "pdflatex"
-            ]
-        }
+                "pdflatex",
+            ],
+        },
     ],
+    "latex-workshop.formatting.latex": "latexindent",
     "latex-workshop.latexindent.args": [
         "-c",
         "%DIR%",
         "%TMPFILE%",
         "-y",
-        "defaultIndent: '%INDENT%', verbatimEnvironments:nameAsRegex:name: '\\w+code\\*?'"
+        "defaultIndent: '%INDENT%', verbatimEnvironments:nameAsRegex:name: '\\w+code\\*?'",
     ],
     "latex-workshop.latex.clean.fileTypes": [
         "*.xdv",
@@ -348,16 +369,17 @@
         "*.synctex(busy)",
         "*.synctex.gz(busy)",
         "_minted-*/**",
-        "_minted-*/"
+        "_minted-*/",
     ],
 
     //* LaTeX Utilities */
     "latex-utilities.countWord.format": "${words} Words (${wordsBody} in Body)",
-    "latex-utilities.countWord.args": ["-merge", "%DOC%"],
+    "latex-utilities.countWord.args": [
+        "-merge",
+        "%DOC%",
+    ],
     "latex-utilities.formattedPaste.tableBooktabsStyle": true,
     "latex-utilities.formattedPaste.image.template": "\\includegraphics[width=\\linewidth]{${imageFilePath}}",
-    "latex-utilities.tikzpreview.enabled": true,
-    "latex-utilities.tikzpreview.parseTeXFile": true,
 
     //* Local History */
     "local-history.enabled": 2,
@@ -365,5 +387,18 @@
     "local-history.path": "${workspaceFolder}/.vscode",
     "local-history.saveDelay": 120,
     "local-history.daysLimit": 14,
-    "local-history.treeLocation": "localHistory"
+    "local-history.treeLocation": "localHistory",
+
+    //* Markdown All in One */
+    "markdown.extension.list.indentationSize": "inherit",
+    "markdown.extension.preview.autoShowPreviewToSide": false,
+    "markdown.extension.orderedList.autoRenumber": true,
+    "markdown.extension.tableFormatter.enabled": true,
+    "markdown.extension.toc.updateOnSave": true,
+    "markdown.extension.toc.levels": "2..6",
+    "markdown.extension.toc.omittedFromToc": {
+        "README.md": [
+            "## Table of Contents",
+        ],
+    },
 }

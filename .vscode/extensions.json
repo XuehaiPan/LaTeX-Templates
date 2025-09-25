@@ -2,6 +2,8 @@
     "recommendations": [
         "james-yu.latex-workshop",
         "tecosaur.latex-utilities",
-        "xyz.local-history"
+        "yzhang.markdown-all-in-one",
+        "oderwat.indent-rainbow",
+        "xyz.local-history",
     ]
 }

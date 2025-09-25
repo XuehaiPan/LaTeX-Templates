@@ -222,6 +222,14 @@
 \setmintedinline{fontsize={\smaller}}
 
 \RequirePackage{hyperref,url} % Required for hyperlinks
+\hypersetup{
+  colorlinks=true,
+  linkcolor={},
+  citecolor={blue},
+  filecolor={cyan},
+  urlcolor={blue},
+  linktocpage=true,
+}
 
 \RequirePackage{amsmath,amssymb,amsfonts} % Required for math
 \RequirePackage{mathtools}

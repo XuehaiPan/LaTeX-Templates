@@ -74,6 +74,16 @@
 \RequirePackage{enumitem} % Required for list customisation
 \setlist{noitemsep} % No spacing between list items
 
+\RequirePackage{hyperref,url} % Required for hyperlinks
+\hypersetup{
+  colorlinks=true,
+  linkcolor={red},
+  citecolor={blue},
+  filecolor={cyan},
+  urlcolor={blue},
+  linktocpage=true,
+}
+
 %----------------------------------------------------------------------------------------
 % DOCUMENT MARGINS
 %----------------------------------------------------------------------------------------

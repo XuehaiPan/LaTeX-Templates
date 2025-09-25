@@ -226,6 +226,14 @@
 \RequirePackage{enumitem} % To modify the enumerate environment
 
 \RequirePackage{hyperref,url} % Required for hyperlinks
+\hypersetup{
+  colorlinks=true,
+  linkcolor={red},
+  citecolor={blue},
+  filecolor={cyan},
+  urlcolor={blue},
+  linktocpage=true,
+}
 
 \RequirePackage{amsmath,amssymb,amsfonts} % Required for math
 \RequirePackage{mathtools}
